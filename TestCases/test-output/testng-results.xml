@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-10-15T06:01:21 UTC" name="Suite" finished-at="2025-10-15T06:02:06 UTC" duration-ms="45355">
+    <groups>
+      <group name="Outlook">
+        <method signature="OutlookTest.generateMeetingLink()[pri:1, instance:SynoptixAI.TestClasses.OutlookTest@3bf7ca37]" name="generateMeetingLink" class="SynoptixAI.TestClasses.OutlookTest"/>
+        <method signature="OutlookTest.draftNewEmail()[pri:2, instance:SynoptixAI.TestClasses.OutlookTest@3bf7ca37]" name="draftNewEmail" class="SynoptixAI.TestClasses.OutlookTest"/>
+      </group> <!-- Outlook -->
+      <group name="login">
+        <method signature="LoginTest.testValidLogin()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@15de0b3c]" name="testValidLogin" class="SynoptixAI.TestClasses.LoginTest"/>
+      </group> <!-- login -->
+    </groups>
+    <test started-at="2025-10-15T06:01:21 UTC" name="Test" finished-at="2025-10-15T06:02:06 UTC" duration-ms="45355">
+      <class name="SynoptixAI.TestClasses.LoginTest">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@15de0b3c]" started-at="2025-10-15T06:01:10 UTC" name="setupSuite" finished-at="2025-10-15T06:01:21 UTC" duration-ms="10446" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method signature="testValidLogin()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@15de0b3c]" started-at="2025-10-15T06:01:21 UTC" name="testValidLogin" finished-at="2025-10-15T06:01:34 UTC" duration-ms="13455" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+      </class> <!-- SynoptixAI.TestClasses.LoginTest -->
+      <class name="SynoptixAI.TestClasses.GraphGenerationTest">
+        <test-method is-config="true" signature="setUpGraph()[pri:0, instance:SynoptixAI.TestClasses.GraphGenerationTest@79079097]" started-at="2025-10-15T06:02:00 UTC" name="setUpGraph" finished-at="2025-10-15T06:02:00 UTC" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpGraph -->
+        <test-method signature="generateBarGraph()[pri:3, instance:SynoptixAI.TestClasses.GraphGenerationTest@79079097]" started-at="2025-10-15T06:02:00 UTC" name="generateBarGraph" depends-on-groups="Outlook" finished-at="2025-10-15T06:02:06 UTC" duration-ms="5721" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateBarGraph -->
+      </class> <!-- SynoptixAI.TestClasses.GraphGenerationTest -->
+      <class name="SynoptixAI.TestClasses.OutlookTest">
+        <test-method is-config="true" signature="setUpOutlook()[pri:0, instance:SynoptixAI.TestClasses.OutlookTest@3bf7ca37]" started-at="2025-10-15T06:01:34 UTC" name="setUpOutlook" finished-at="2025-10-15T06:01:39 UTC" duration-ms="4467" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpOutlook -->
+        <test-method signature="generateMeetingLink()[pri:1, instance:SynoptixAI.TestClasses.OutlookTest@3bf7ca37]" started-at="2025-10-15T06:01:39 UTC" name="generateMeetingLink" depends-on-groups="login" finished-at="2025-10-15T06:01:49 UTC" duration-ms="10486" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- generateMeetingLink -->
+        <test-method signature="draftNewEmail()[pri:2, instance:SynoptixAI.TestClasses.OutlookTest@3bf7ca37]" started-at="2025-10-15T06:01:49 UTC" name="draftNewEmail" depends-on-groups="login" finished-at="2025-10-15T06:02:00 UTC" duration-ms="11174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- draftNewEmail -->
+      </class> <!-- SynoptixAI.TestClasses.OutlookTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>
