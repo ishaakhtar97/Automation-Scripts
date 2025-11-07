@@ -4,8 +4,14 @@
   <test thread-count="1" name="Test">
   <classes>
            <class name="SynoptixAI.TestClasses.LoginTest"/> 
-            <class name="SynoptixAI.TestClasses.OutlookTest"/>
+          <!--   <class name="SynoptixAI.TestClasses.OutlookTest"/>-->
+          <class name="SynoptixAI.TestClasses.OutlookTest"/>
              <class name="SynoptixAI.TestClasses.GraphGenerationTest"/>
+             <class name="SynoptixAI.TestClasses.LinkedInTest"/>
+             <class name="SynoptixAI.TestClasses.xPostTest"/>
+         
+             <class name="SynoptixAI.TestClasses.ImageGenerationTest"/>     
+             <class name="SynoptixAI.TestClasses.PresentationBuilderTest"/> 
         </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

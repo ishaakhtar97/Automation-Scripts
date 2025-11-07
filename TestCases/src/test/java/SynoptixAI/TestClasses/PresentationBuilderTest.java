@@ -4,29 +4,24 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import SynoptixAI.Pages.GraphGeneration;
-import SynoptixAI.Pages.Outlook;
+import SynoptixAI.Pages.PresentationBuilder;
 import SynoptixAI.Setup.BaseSetup;
-import SynoptixAI.TestClasses.OutlookTest;
 
-public class GraphGenerationTest extends BaseSetup{
-	GraphGeneration chart;
+public class PresentationBuilderTest  extends BaseSetup{
+	PresentationBuilder ppt;
 
 	// 🔹 Initialize once before any test runs
 	@BeforeClass(alwaysRun = true)
 	public void setUpGraph() {
-		chart = new GraphGeneration(driver);    
-		chart.turnOnGraphTool();
+		ppt = new PresentationBuilder(driver);    
+		ppt.turnOnPPTTool();
 	}
 
 
-	@Test (priority=3)
-	public void generateBarGraph() throws InterruptedException 
+	@Test (priority=6)
+	public void generatePresentation() throws InterruptedException 
 	{
-		chart.generateGraph();
+		ppt.generatePPT();
 		Thread.sleep(2000);
 	}
 }
-
-
-
-

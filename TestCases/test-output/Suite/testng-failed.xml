@@ -3,18 +3,40 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SynoptixAI.TestClasses.LoginTest">
+      <class name="SynoptixAI.TestClasses.PresentationBuilderTest">
         <methods>
-          <include name="testValidLogin"/>
+          <include name="generatePresentation"/>
+          <include name="setupSuite"/>
+          <include name="setUpGraph"/>
+        </methods>
+      </class> <!-- SynoptixAI.TestClasses.PresentationBuilderTest -->
+      <class name="SynoptixAI.TestClasses.xPostTest">
+        <methods>
+          <include name="setUpX"/>
+          <include name="setupSuite"/>
+          <include name="createXPost"/>
+        </methods>
+      </class> <!-- SynoptixAI.TestClasses.xPostTest -->
+      <class name="SynoptixAI.TestClasses.LinkedInTest">
+        <methods>
+          <include name="createLinkedInPost"/>
+          <include name="setupSuite"/>
+          <include name="setUpLinkedIn"/>
+        </methods>
+      </class> <!-- SynoptixAI.TestClasses.LinkedInTest -->
+      <class name="SynoptixAI.TestClasses.ImageGenerationTest">
+        <methods>
+          <include name="setUpGraph"/>
+          <include name="imageGeneration"/>
           <include name="setupSuite"/>
         </methods>
-      </class> <!-- SynoptixAI.TestClasses.LoginTest -->
+      </class> <!-- SynoptixAI.TestClasses.ImageGenerationTest -->
       <class name="SynoptixAI.TestClasses.OutlookTest">
         <methods>
           <include name="generateMeetingLink"/>
           <include name="setUpOutlook"/>
-          <include name="draftNewEmail"/>
           <include name="setupSuite"/>
+          <include name="draftNewEmail"/>
         </methods>
       </class> <!-- SynoptixAI.TestClasses.OutlookTest -->
       <class name="SynoptixAI.TestClasses.GraphGenerationTest">

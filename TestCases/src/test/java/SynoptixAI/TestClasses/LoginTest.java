@@ -1,5 +1,6 @@
 package SynoptixAI.TestClasses;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 import SynoptixAI.Pages.AuthenticationPage;
@@ -37,8 +38,9 @@ public class LoginTest extends BaseSetup{
         } catch (Exception e) {
             System.out.println("Stay signed in page not shown this time — continuing...");
         }
-
+        
         stayPage.waitForLoginCompletion();
+        ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='85%'");
        
 
         System.out.println("Microsoft Login flow completed");

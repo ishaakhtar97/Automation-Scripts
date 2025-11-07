@@ -9,25 +9,24 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class GraphGeneration {
-
+public class PresentationBuilder {
 	WebDriver driver;
 	WebDriverWait wait;
 	private By connections=By.cssSelector("img[alt='Connections']");
 	private By tools=By.xpath("//button[normalize-space()='Tools']");
-	private By graphCon=By.cssSelector("p[title='Create data visualizations.']");
+	private By pptCon=By.cssSelector("p[title='Design professional slides.']");
 	private By addCon=By.xpath("(//button[normalize-space()='Add (1)'])[1]");
 	private By newChatBtnLoc=By.xpath("//span[normalize-space()='New Chat']");
 	private By promptFieldLoc=By.xpath("//textarea[@id='synoptix-message-input']");
 	private By sendBtnLoc=By.cssSelector("img[alt='Send']");
 
-	public GraphGeneration(WebDriver driver) {
+	public PresentationBuilder(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(180));
 
 	}
 
-	public void turnOnGraphTool() {
+	public void turnOnPPTTool() {
 
 		WebElement newChatBtn=wait.until(ExpectedConditions.elementToBeClickable(newChatBtnLoc));
 		newChatBtn.click();
@@ -35,27 +34,25 @@ public class GraphGeneration {
 		conBtn.click();
 		WebElement toolBtn = wait.until(ExpectedConditions.elementToBeClickable(tools));
 		toolBtn.click();
-		WebElement graphBtn=wait.until(ExpectedConditions.elementToBeClickable(graphCon));	
-		graphBtn.click();
+		WebElement pptBtn=wait.until(ExpectedConditions.elementToBeClickable(pptCon));	
+		pptBtn.click();
 		WebElement addBtn = wait.until(ExpectedConditions.elementToBeClickable(addCon));
 		addBtn.click();
 	}
 
-	public void generateGraph() throws InterruptedException
+	public void generatePPT() throws InterruptedException
 	{
 
 		WebElement promptField=driver.findElement(promptFieldLoc);
 		promptField.click();
-		promptField.sendKeys("Create a bar chart showing sales of laptops  700, mobiles 500, and tablets 150  for Q1");
+		promptField.sendKeys("Create 5 slide presentation on how climate change is affecting different continents.");
 		WebElement sendButton=wait.until(ExpectedConditions.elementToBeClickable(sendBtnLoc));
 		sendButton.click();
-		WebElement chart = wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("canvas[role='img']")));
-		// Step 5: Validate chart presence
-		Assert.assertTrue(chart.isDisplayed(), "Bar chart is not displayed.");
+		 WebElement pptButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//a[normalize-space()='Download and review']")));
+	       // meetingLinkButton.click();
+	        Assert.assertTrue(pptButton.isDisplayed(), "Presentation generated!");
 	}
 
 
 
-
 }
-

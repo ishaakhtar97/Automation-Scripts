@@ -4,29 +4,24 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import SynoptixAI.Pages.GraphGeneration;
-import SynoptixAI.Pages.Outlook;
+import SynoptixAI.Pages.ImageGeneration;
 import SynoptixAI.Setup.BaseSetup;
-import SynoptixAI.TestClasses.OutlookTest;
 
-public class GraphGenerationTest extends BaseSetup{
-	GraphGeneration chart;
+public class ImageGenerationTest  extends BaseSetup{
+	ImageGeneration image;
 
 	// 🔹 Initialize once before any test runs
 	@BeforeClass(alwaysRun = true)
 	public void setUpGraph() {
-		chart = new GraphGeneration(driver);    
-		chart.turnOnGraphTool();
+		image = new ImageGeneration(driver);    
+		image.turnOnImageTool();
 	}
 
 
 	@Test (priority=3)
-	public void generateBarGraph() throws InterruptedException 
+	public void imageGeneration() throws InterruptedException 
 	{
-		chart.generateGraph();
+		image.generateImage();
 		Thread.sleep(2000);
 	}
 }
-
-
-
-

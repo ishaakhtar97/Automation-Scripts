@@ -10,7 +10,7 @@ import SynoptixAI.TestClasses.LoginTest;
 
 
 public class OutlookTest extends BaseSetup{
-	Outlook outlook;
+	Outlook outlook;	
 
     // 🔹 Initialize once before any test runs
     @BeforeClass(alwaysRun = true)
@@ -21,9 +21,10 @@ public class OutlookTest extends BaseSetup{
 	
         
 	@Test (priority=1, dependsOnGroups = "login", groups="Outlook")
-    public void generateMeetingLink() 
+    public void generateMeetingLink() throws InterruptedException 
 	{
 		outlook.generateMeetingLink();
+		Thread.sleep(2000);
 	}
 	
 	@Test (priority=2, dependsOnGroups = "login", groups="Outlook")

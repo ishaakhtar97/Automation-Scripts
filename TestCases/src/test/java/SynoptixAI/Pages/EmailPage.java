@@ -18,13 +18,13 @@ public class EmailPage {
 
     public EmailPage(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
     }
 
 
 	// Actions
     public void enterEmail(String email) {
-        WebElement emailField = wait.until(ExpectedConditions.visibilityOfElementLocated(emailInput));
+        WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(emailInput));
         emailField.sendKeys(email);
     }
 
