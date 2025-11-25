@@ -1,17 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Suite" parallel="none">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Suite" parallel="none" >
   <test thread-count="1" name="Test">
   <classes>
            <class name="SynoptixAI.TestClasses.LoginTest"/> 
-          <!--   <class name="SynoptixAI.TestClasses.OutlookTest"/>-->
+           
+          <!--   <class name="SynoptixAI.TestClasses.OutlookTest"/>
+          <class name="SynoptixAI.TestClasses.MyAgentsTest"/>
           <class name="SynoptixAI.TestClasses.OutlookTest"/>
              <class name="SynoptixAI.TestClasses.GraphGenerationTest"/>
              <class name="SynoptixAI.TestClasses.LinkedInTest"/>
              <class name="SynoptixAI.TestClasses.xPostTest"/>
-         
              <class name="SynoptixAI.TestClasses.ImageGenerationTest"/>     
              <class name="SynoptixAI.TestClasses.PresentationBuilderTest"/> 
+             <class name="SynoptixAI.TestClasses.EvaluationsTest"/> 
+             <class name="SynoptixAI.TestClasses.MyAgentsTest"/>
+             <class name="SynoptixAI.TestClasses.AgentLibraryTest"/> 
+              <class name="SynoptixAI.TestClasses.UserTest"/> -->
+              <class name="SynoptixAI.TestClasses.MarketingAgentsTest"/> 
+              <class name="SynoptixAI.TestClasses.DeveloperAgentsTest"/> 
+              <class name="SynoptixAI.TestClasses.ResearcherAgentsTest"/> 
+               <class name="SynoptixAI.TestClasses.LegalAgentsTest"/> 
+               <class name="SynoptixAI.TestClasses.ComplianceAgentsTest"/>
+               <class name="SynoptixAI.TestClasses.HRAgentsTest"/>
+                <class name="SynoptixAI.TestClasses.ProjectManagementAgentsTest"/>
+                 <class name="SynoptixAI.TestClasses.SalesAgentsTest"/>
+                  <class name="SynoptixAI.TestClasses.ITOperationsAgentsTest"/>
+                   <class name="SynoptixAI.TestClasses.FinanceAgentsTest"/>
+            
+             
         </classes>
   </test> <!-- Test -->
-</suite> <!-- Suite -->
+</suite> <!-- Suite  -->
+
+

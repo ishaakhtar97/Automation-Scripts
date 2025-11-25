@@ -13,7 +13,7 @@ public class LoginTest extends BaseSetup{
 	
 	
 	@Test (groups="login")
-    public void testValidLogin() {
+    public void successfulLogin() {
 		// Step 1: Email
         EmailPage emailPage = new EmailPage(driver);
         emailPage.enterEmail("isha.akhtar@synoptix.ai");
@@ -39,7 +39,7 @@ public class LoginTest extends BaseSetup{
             System.out.println("Stay signed in page not shown this time — continuing...");
         }
         
-        stayPage.waitForLoginCompletion();
+    stayPage.waitForLoginCompletion();
         ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='85%'");
        
 
