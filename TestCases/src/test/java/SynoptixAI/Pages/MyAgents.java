@@ -8,35 +8,40 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class MyAgents {
 
 	WebDriver driver;
 	WebDriverWait wait;
+	private By promptLib=By.xpath("//button[.//div[normalize-space()='Prompt Library']]");
 
 	private By myAgents=By.xpath("//span[normalize-space()='My Agents']");
 	private By createAgent=By.xpath("//a[normalize-space()='Create Agent']");
 	private By nameField=By.xpath("//input[@placeholder='New Agent']");
 	private By descField=By.cssSelector("input[placeholder='Add a one line description']");
-	private By modelField=By.xpath("//div[@class='flex items-start gap-2']");
-	private By selectModel=By.xpath("//div[@id='radix-_r_m_']");
-	private By conField=By.xpath("//span[normalize-space()='Select Connections & Tools']");
+	//private By modelField=By.xpath("//div[@class='flex items-start gap-2']");
+	//private By selectModel=By.xpath("//div[@id='radix-_r_m_']");
+	private By conField=By.xpath("//div[@class='text-xs text-gray-400']");
+	private By conDrpDown=By.xpath("//span[normalize-space()='Connections & Tools']");
 	private By sharePointCon=By.cssSelector("p[title='Search, read, and update your company documents.']");
 	private By addBtn=By.xpath("//button[normalize-space()='Add (1)']");
 	private By toolsField=By.xpath("//button[normalize-space()='Tools']");
 	private By pptTool=By.cssSelector("p[title='Design professional slides.']");
-	private By info=By.cssSelector("textarea[placeholder='You are AI assistant that helps people find information']");
+	private By info=By.xpath("//textarea[@placeholder='Enter detailed instructions to get the best results']");
 	private By deployBtn=By.xpath("	//button[normalize-space()='Deploy']");
 	private By options=By.xpath("(//button[.//*[name()='svg']])[5]");
+	//private By options=By.xpath("//button[@id='radix-_r_d_']//*[name()='svg']");
 	private By share=By.xpath("//div[normalize-space()='Share']");
 	private By edit=By.xpath("//div[normalize-space()='Edit']");
-	private By delete=By.xpath("//div[normalize-space()='Edit']/following-sibling::div[2]");
+	//private By delete=By.xpath("//div[normalize-space()='Edit']/following-sibling::div[2]");
+	private By delete=By.xpath("//div[normalize-space()='Delete']");
 	private By urlField=By.xpath("//input[@placeholder='Enter URL and press Enter']");
 	private By update=By.xpath("//button[normalize-space()='Update']");
 	private By shareEmail=By.xpath("(//input)[1]");
 	private By shareAgent=By.xpath("//button[normalize-space()='Share']");
 	private By deleteAgent=By.xpath("//button[normalize-space()='Delete']");
-	
+
 	public MyAgents(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -44,6 +49,7 @@ public class MyAgents {
 
 	public void agentCreation() throws InterruptedException 
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(promptLib)).click();
 		WebElement agentBtn = wait.until(ExpectedConditions.elementToBeClickable(myAgents));
 		agentBtn.click();
 		Thread.sleep(2000);
@@ -55,18 +61,23 @@ public class MyAgents {
 		WebElement description = wait.until(ExpectedConditions.elementToBeClickable(descField));
 		description.click();
 		description.sendKeys("I will assist you in managing project milestones timely");
+		WebElement agentInfo = wait.until(ExpectedConditions.elementToBeClickable(info));
+		agentInfo.click();
+		agentInfo.sendKeys("PMO Agent is typically designed to assist with managing and streamlining project management tasks within an organization.");
 		/*WebElement model = wait.until(ExpectedConditions.elementToBeClickable(modelField));
 		model.click();
 		WebElement chooseModel = wait.until(ExpectedConditions.elementToBeClickable(selectModel));
 		chooseModel.click();*/
-		WebElement connections = wait.until(ExpectedConditions.elementToBeClickable(conField));
-		connections.click();
+		wait.until(ExpectedConditions.elementToBeClickable(conDrpDown)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(conField)).click();
+		//WebElement connections = wait.until(ExpectedConditions.elementToBeClickable(conField));
+		//connections.click();
 		Thread.sleep(1000);
-		WebElement selectCon = wait.until(ExpectedConditions.elementToBeClickable(sharePointCon));
-		selectCon.click();
+		//WebElement selectCon = wait.until(ExpectedConditions.elementToBeClickable(sharePointCon));
+		//selectCon.click();
 		//WebElement add = wait.until(ExpectedConditions.elementToBeClickable(addBtn));
 		//add.click();
-		Thread.sleep(1000);
+		//Thread.sleep(1000);
 		WebElement tools = wait.until(ExpectedConditions.elementToBeClickable(toolsField));
 		tools.click();
 		Thread.sleep(1000);
@@ -74,12 +85,15 @@ public class MyAgents {
 		slidesTool.click();
 		WebElement addTool = wait.until(ExpectedConditions.elementToBeClickable(addBtn));
 		addTool.click();
-		WebElement agentInfo = wait.until(ExpectedConditions.elementToBeClickable(info));
-		agentInfo.click();
-		agentInfo.sendKeys("PMO Agent is typically designed to assist with managing and streamlining project management tasks within an organization.");
+
 		WebElement deployAgent = wait.until(ExpectedConditions.elementToBeClickable(deployBtn));
 		deployAgent.click();
-		try {
+		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		By.xpath("//*[contains(text(),'successfully') or contains(text(),'Success') or contains(text(),'deployed')]")));
+		Assert.assertTrue(successToast.isDisplayed(),"Agent creation failed");
+		System.out.println(successToast.getText());
+
+		/*try {
 			// Use a flexible locator since toast notifications usually have changing structure
 			WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
 					By.xpath("//*[contains(text(),'successfully') or contains(text(),'Success') or contains(text(),'deployed')]")
@@ -89,7 +103,7 @@ public class MyAgents {
 
 		} catch (Exception e) {
 			System.out.println("Agent may not get created");
-		}
+		}*/
 
 	}
 
@@ -103,25 +117,43 @@ public class MyAgents {
 		Thread.sleep(1000);
 		WebElement editBtn = wait.until(ExpectedConditions.elementToBeClickable(edit));
 		editBtn.click();
+		WebElement agentInfo = wait.until(ExpectedConditions.elementToBeClickable(info));
+		agentInfo.click();
+		agentInfo.sendKeys(" Ok.");
+		wait.until(ExpectedConditions.elementToBeClickable(conDrpDown)).click();
 		WebElement url = wait.until(ExpectedConditions.elementToBeClickable(urlField));
 		url.click();
 		url.sendKeys("https://www.google.com/");
 		Thread.sleep(2000);
 		WebElement updateBtn = wait.until(ExpectedConditions.elementToBeClickable(update));
 		updateBtn.click();
-		try {
-			// Use a flexible locator since toast notifications usually have changing structure
-			WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//*[contains(text(),'successfully') or contains(text(),'Updated Sucessfully')]")
-					));
+		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		By.xpath("//*[contains(text(),'successfully') or contains(text(),'Updated Sucessfully')]")));
+		Assert.assertTrue(successToast.isDisplayed(),"Agent Updation failed");
+		System.out.println(successToast.getText());
 
-			System.out.println("Agent updated " + successToast.getText());
-
-		} catch (Exception e) {
-			System.out.println("Agent may not get updated");
-		}
 	}
 
+	public void agentDelete() throws InterruptedException 
+	{
+		WebElement agentBtn = wait.until(ExpectedConditions.elementToBeClickable(myAgents));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", agentBtn);
+		Thread.sleep(500);
+		agentBtn.click();
+		Thread.sleep(2000);
+		WebElement optionBtn = wait.until(ExpectedConditions.elementToBeClickable(options));
+		optionBtn.click();
+		Thread.sleep(1000);
+		WebElement deleteOption = wait.until(ExpectedConditions.elementToBeClickable(delete));
+		deleteOption.click();
+		WebElement deleteAgentBtn = wait.until(ExpectedConditions.elementToBeClickable(deleteAgent));
+		deleteAgentBtn.click();
+		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+		By.xpath("//*[contains(text(),'Successfully') or contains(text(),'Deleted Successfully')]")));
+		Assert.assertTrue(successToast.isDisplayed(),"Agent Deletion failed");
+		System.out.println(successToast.getText());
+
+	}
 	public void agentShare() throws InterruptedException 
 	{
 		WebElement agentBtn = wait.until(ExpectedConditions.elementToBeClickable(myAgents));
@@ -152,31 +184,4 @@ public class MyAgents {
 			System.out.println("Agent may not shared");
 		}
 	}
-	public void agentDelete() throws InterruptedException 
-	{
-		WebElement agentBtn = wait.until(ExpectedConditions.elementToBeClickable(myAgents));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", agentBtn);
-		Thread.sleep(500);
-		agentBtn.click();
-		Thread.sleep(2000);
-		WebElement optionBtn = wait.until(ExpectedConditions.elementToBeClickable(options));
-		optionBtn.click();
-		Thread.sleep(1000);
-		WebElement deleteOption = wait.until(ExpectedConditions.elementToBeClickable(delete));
-		deleteOption.click();
-		WebElement deleteAgentBtn = wait.until(ExpectedConditions.elementToBeClickable(deleteAgent));
-		deleteAgentBtn.click();
-		try {
-			// Use a flexible locator since toast notifications usually have changing structure
-			WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//*[contains(text(),'Successfully') or contains(text(),'Deleted Successfully')]")
-					));
-
-			System.out.println("Agent Deleted " + successToast.getText());
-
-		} catch (Exception e) {
-			System.out.println("Agent may not get updated");
-		}
-	}
-
 }

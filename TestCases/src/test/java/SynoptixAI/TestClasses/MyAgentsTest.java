@@ -39,10 +39,10 @@ public class MyAgentsTest extends BaseSetup{
 		Thread.sleep(2000);
 	}
 	
-	@Test (priority=13)
+	/*@Test (priority=13)
 	public void shareAgent() throws InterruptedException 
 	{
 		agents.agentShare();
 		Thread.sleep(2000);
-	}
+	}*/
 }

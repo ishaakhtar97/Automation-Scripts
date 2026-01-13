@@ -18,7 +18,7 @@ public class LegalAgents {
 
 	//private By home=By.xpath("//span[contains(@class,'text-sm font-medium')]");
 	private By agentLibrary=By.xpath("//span[normalize-space()='Agent Library']");
-	private By agentCategory=By.xpath("//span[normalize-space()='Reseracher' or normalize-space()='All Teams']");
+	private By agentCategory=By.xpath("//span[normalize-space()='Researcher' or normalize-space()='All Teams']");
 	private By legalCategory=By.xpath("//button[contains(text(),'Legal')]");
 	private By legalStrategyAgent=By.xpath("(//button[contains(text(),'Try Now')])[1]");
 	private By quickLegalAgent=By.xpath("(//button[contains(text(),'Try Now')])[2]");

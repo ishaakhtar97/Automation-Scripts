@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="SynoptixAI.TestClasses.LoginTest">
+      <class name="SynoptixAI.TestClasses.PromptLibraryTest">
         <methods>
-          <include name="testValidLogin"/>
-          <include name="setup"/>
+          <include name="createPrompt"/>
+          <include name="setupSuite"/>
+          <include name="setUpObject"/>
         </methods>
-      </class> <!-- SynoptixAI.TestClasses.LoginTest -->
+      </class> <!-- SynoptixAI.TestClasses.PromptLibraryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

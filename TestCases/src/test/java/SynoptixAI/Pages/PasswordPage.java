@@ -13,8 +13,9 @@ public class PasswordPage {
     WebDriverWait wait;
 
     // Locators
-    private By passwordInput = By.name("passwd");
-    private By signInBtn = By.id("idSIButton9");
+    private By passwordInput = By.name("Passwd");
+    private By signInBtn=By.xpath("//span[normalize-space()='Next']");
+    //private By signInBtn = By.id("idSIButton9");
 
     public PasswordPage(WebDriver driver) {
         this.driver = driver;

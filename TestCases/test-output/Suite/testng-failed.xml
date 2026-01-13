@@ -3,82 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SynoptixAI.TestClasses.ProjectManagementAgentsTest">
+      <class name="SynoptixAI.TestClasses.MyAgentsTest">
         <methods>
-          <include name="generate_Task_Plans_Agent"/>
-          <include name="summarise_Project_Updates_Agent"/>
-          <include name="risk_Mitigation_Assistant_Agent"/>
+          <include name="createAgent"/>
           <include name="setUpObject"/>
           <include name="setupSuite"/>
-          <include name="risk_Assessment_Agent"/>
-          <include name="resource_Planning_And_Management_Agent"/>
         </methods>
-      </class> <!-- SynoptixAI.TestClasses.ProjectManagementAgentsTest -->
-      <class name="SynoptixAI.TestClasses.HRAgentsTest">
-        <methods>
-          <include name="streamline_Benefits_and_Compensation_Agent"/>
-          <include name="draft_Offer_Letter_Agent"/>
-          <include name="candidate_Search_Agent"/>
-          <include name="hR_HelpDesk_Agent"/>
-          <include name="setupSuite"/>
-          <include name="setUpObject"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.HRAgentsTest -->
-      <class name="SynoptixAI.TestClasses.FinanceAgentsTest">
-        <methods>
-          <include name="accounting_Document_Evalution_Agent"/>
-          <include name="setUpObject"/>
-          <include name="financial_Anamoly_Detector_Agent"/>
-          <include name="finance_Management_GuideBook_Agent"/>
-          <include name="finance_Report_Generator_Agent"/>
-          <include name="finance_EOM_Accruals_Agent"/>
-          <include name="setupSuite"/>
-          <include name="forecasting_And_Budgeting_Agent"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.FinanceAgentsTest -->
-      <class name="SynoptixAI.TestClasses.SalesAgentsTest">
-        <methods>
-          <include name="contract_Summariser_Agent"/>
-          <include name="lead_Qualification_Agent"/>
-          <include name="sales_Intelligent_Agent"/>
-          <include name="setupSuite"/>
-          <include name="setUpObject"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.SalesAgentsTest -->
-      <class name="SynoptixAI.TestClasses.LegalAgentsTest">
-        <methods>
-          <include name="extract_Legal_Facts_Agent"/>
-          <include name="setUpObject"/>
-          <include name="setupSuite"/>
-          <include name="review_Legal_Document_Agent"/>
-          <include name="legal_Strategy_Development_Agent"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.LegalAgentsTest -->
-      <class name="SynoptixAI.TestClasses.ITOperationsAgentsTest">
-        <methods>
-          <include name="setUpObject"/>
-          <include name="search_Latest_IT_Solutions_Agent"/>
-          <include name="setupSuite"/>
-          <include name="access_Request_Assistant_Agent"/>
-          <include name="it_HelpDesk_Agent"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.ITOperationsAgentsTest -->
-      <class name="SynoptixAI.TestClasses.ComplianceAgentsTest">
-        <methods>
-          <include name="setUpObject"/>
-          <include name="complaince_Training_Assistant_Agent"/>
-          <include name="compliance_Risk_Detector_Agent"/>
-          <include name="setupSuite"/>
-          <include name="third_Party_Compliance_Agent"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.ComplianceAgentsTest -->
-      <class name="SynoptixAI.TestClasses.MarketingAgentsTest">
-        <methods>
-          <include name="setUpObject"/>
-          <include name="create_BOM_Agent"/>
-          <include name="setupSuite"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.MarketingAgentsTest -->
+      </class> <!-- SynoptixAI.TestClasses.MyAgentsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

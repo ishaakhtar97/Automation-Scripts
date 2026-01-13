@@ -13,8 +13,12 @@ public class EmailPage {
     WebDriverWait wait;
 
     // Locators
-    private By emailInput = By.id("i0116");
-    private By nextBtn = By.id("idSIButton9");
+   private By emailInput = By.xpath("//input[@placeholder='Enter your email address']");
+   
+   private By passwordInput = By.xpath("//input[@placeholder='Password']");
+   private By nextBtn = By.xpath("//button[contains(text(),'Login')]");
+    
+    
 
     public EmailPage(WebDriver driver) {
         this.driver = driver;
@@ -27,8 +31,15 @@ public class EmailPage {
         WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(emailInput));
         emailField.sendKeys(email);
     }
+    
+ // Actions
+    public void enterPassword(String password) {
+        WebElement passField = wait.until(ExpectedConditions.elementToBeClickable(passwordInput));
+        passField.sendKeys(password);
+    }
 
-    public void clickNext() {
+
+    public void Login() {
         WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(nextBtn));
         nextButton.click();
     }
