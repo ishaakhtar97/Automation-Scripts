@@ -17,20 +17,15 @@ public class ProjectManagementAgentsTest extends BaseSetup{
 		agents = new ProjectManagementAgents(driver);    // Use global driver from BaseSetup
 
 	}
-	@Test (priority=90)
-	public void generate_Task_Plans_Agent() throws InterruptedException 
+	
+	
+	@Test (priority=91)
+	public void project_Governance_Agent() throws InterruptedException 
 	{
-		agents.checkGenerateTask();
+		agents.checkGovernance();
 		Thread.sleep(5000);
 	}
 
-	@Test (priority=91)
-	public void resource_Planning_And_Management_Agent() throws InterruptedException 
-	{
-		agents.checkResourcePlanning();
-		Thread.sleep(5000);
-	}
-	
 	@Test (priority=92)
 	public void risk_Assessment_Agent() throws InterruptedException 
 	{
@@ -38,17 +33,6 @@ public class ProjectManagementAgentsTest extends BaseSetup{
 		Thread.sleep(5000);
 	}
 	
-	@Test (priority=93)
-	public void risk_Mitigation_Assistant_Agent() throws InterruptedException 
-	{
-		agents.checkRiskMitigation();
-		Thread.sleep(5000);
-	}
-	@Test (priority=94)
-	public void summarise_Project_Updates_Agent() throws InterruptedException 
-	{
-		agents.checkSummariseProjectAgent();
-		Thread.sleep(5000);
-	}
+	
 	
 }

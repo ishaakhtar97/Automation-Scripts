@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -14,23 +15,20 @@ public class MyAgents {
 
 	WebDriver driver;
 	WebDriverWait wait;
-	private By promptLib=By.xpath("//button[.//div[normalize-space()='Prompt Library']]");
 
 	private By myAgents=By.xpath("//span[normalize-space()='My Agents']");
 	private By createAgent=By.xpath("//a[normalize-space()='Create Agent']");
 	private By nameField=By.xpath("//input[@placeholder='New Agent']");
 	private By descField=By.cssSelector("input[placeholder='Add a one line description']");
-	//private By modelField=By.xpath("//div[@class='flex items-start gap-2']");
-	//private By selectModel=By.xpath("//div[@id='radix-_r_m_']");
-	private By conField=By.xpath("//div[@class='text-xs text-gray-400']");
+	private By conField=By.xpath("//div[normalize-space()='Select Connections & Tools']/ancestor::div[contains(@class,'cursor-pointer')]");
 	private By conDrpDown=By.xpath("//span[normalize-space()='Connections & Tools']");
-	private By sharePointCon=By.cssSelector("p[title='Search, read, and update your company documents.']");
-	private By addBtn=By.xpath("//button[normalize-space()='Add (1)']");
+	private By sharePointCon=By.xpath("//span[normalize-space()='SharePoint']");
+	private By addBtn=By.xpath("//button[.//span[text()='Close']]");
 	private By toolsField=By.xpath("//button[normalize-space()='Tools']");
-	private By pptTool=By.cssSelector("p[title='Design professional slides.']");
-	private By info=By.xpath("//textarea[@placeholder='Enter detailed instructions to get the best results']");
+	private By pptTool=By.xpath("//span[normalize-space()='Presentation Builder']");
+	private By info=By.xpath("//textarea[contains(@placeholder,'Think of your prompt')]");
 	private By deployBtn=By.xpath("	//button[normalize-space()='Deploy']");
-	private By options=By.xpath("(//button[.//*[name()='svg']])[5]");
+	private By options=By.xpath("(//button[.//*[name()='svg']])[3]");
 	//private By options=By.xpath("//button[@id='radix-_r_d_']//*[name()='svg']");
 	private By share=By.xpath("//div[normalize-space()='Share']");
 	private By edit=By.xpath("//div[normalize-space()='Edit']");
@@ -49,7 +47,7 @@ public class MyAgents {
 
 	public void agentCreation() throws InterruptedException 
 	{
-		wait.until(ExpectedConditions.elementToBeClickable(promptLib)).click();
+		//wait.until(ExpectedConditions.elementToBeClickable(promptLib)).click();
 		WebElement agentBtn = wait.until(ExpectedConditions.elementToBeClickable(myAgents));
 		agentBtn.click();
 		Thread.sleep(2000);
@@ -72,17 +70,26 @@ public class MyAgents {
 		wait.until(ExpectedConditions.elementToBeClickable(conField)).click();
 		//WebElement connections = wait.until(ExpectedConditions.elementToBeClickable(conField));
 		//connections.click();
-		Thread.sleep(1000);
-		//WebElement selectCon = wait.until(ExpectedConditions.elementToBeClickable(sharePointCon));
-		//selectCon.click();
-		//WebElement add = wait.until(ExpectedConditions.elementToBeClickable(addBtn));
-		//add.click();
 		//Thread.sleep(1000);
+		WebElement selectCon = wait.until(ExpectedConditions.presenceOfElementLocated(sharePointCon));
+		Actions actions = new Actions(driver);
+
+	    actions.moveToElement(selectCon)
+	           .pause(Duration.ofMillis(200))
+	           .click()
+	           .perform();
+
+		//((JavascriptExecutor) driver).executeScript("arguments[0].click();", selectCon);
 		WebElement tools = wait.until(ExpectedConditions.elementToBeClickable(toolsField));
 		tools.click();
 		Thread.sleep(1000);
-		WebElement slidesTool = wait.until(ExpectedConditions.elementToBeClickable(pptTool));
-		slidesTool.click();
+		WebElement slidesTool = wait.until(ExpectedConditions.presenceOfElementLocated(pptTool));
+		actions.moveToElement(slidesTool)
+        .pause(Duration.ofMillis(200))
+        .click()
+        .perform();
+		
+		//((JavascriptExecutor) driver).executeScript("arguments[0].click();", slidesTool);
 		WebElement addTool = wait.until(ExpectedConditions.elementToBeClickable(addBtn));
 		addTool.click();
 
@@ -93,17 +100,6 @@ public class MyAgents {
 		Assert.assertTrue(successToast.isDisplayed(),"Agent creation failed");
 		System.out.println(successToast.getText());
 
-		/*try {
-			// Use a flexible locator since toast notifications usually have changing structure
-			WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
-					By.xpath("//*[contains(text(),'successfully') or contains(text(),'Success') or contains(text(),'deployed')]")
-					));
-
-			System.out.println("Agent created " + successToast.getText());
-
-		} catch (Exception e) {
-			System.out.println("Agent may not get created");
-		}*/
 
 	}
 
@@ -128,7 +124,7 @@ public class MyAgents {
 		WebElement updateBtn = wait.until(ExpectedConditions.elementToBeClickable(update));
 		updateBtn.click();
 		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
-		By.xpath("//*[contains(text(),'successfully') or contains(text(),'Updated Sucessfully')]")));
+		By.xpath("//*[contains(text(),'successfully') or contains(text(),'updated successfully')]")));
 		Assert.assertTrue(successToast.isDisplayed(),"Agent Updation failed");
 		System.out.println(successToast.getText());
 
@@ -149,7 +145,7 @@ public class MyAgents {
 		WebElement deleteAgentBtn = wait.until(ExpectedConditions.elementToBeClickable(deleteAgent));
 		deleteAgentBtn.click();
 		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
-		By.xpath("//*[contains(text(),'Successfully') or contains(text(),'Deleted Successfully')]")));
+		By.xpath("//*[contains(text(),'successfully') or contains(text(),'deleted successfully')]")));
 		Assert.assertTrue(successToast.isDisplayed(),"Agent Deletion failed");
 		System.out.println(successToast.getText());
 

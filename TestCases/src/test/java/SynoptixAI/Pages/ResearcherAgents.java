@@ -12,156 +12,28 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-public class ResearcherAgents {
+import SynoptixAI.Setup.AgentsBaseSetup;
+
+public class ResearcherAgents extends AgentsBaseSetup{
 	WebDriver driver;
 	WebDriverWait wait;
-
-	//private By home=By.xpath("//span[contains(@class,'text-sm font-medium')]");
-	private By agentLibrary=By.xpath("//span[normalize-space()='Agent Library']");
-	private By agentCategory=By.xpath("//span[normalize-space()='Developer' or normalize-space()='All Teams']");
-	private By researcherCategory=By.xpath("//button[contains(text(),'Researcher')]");
-	private By trendsAnalystAgent=By.xpath("(//button[contains(text(),'Try Now')])[1]");
-	private By marketCompAgent=By.xpath("(//button[contains(text(),'Try Now')])[2]");
-	//private By responseLocator = By.xpath("(//div[contains(@class,'text')])[10]");
-	private By responseLocator = By.xpath("//div[contains(@class,'font-normal') and contains(@class,'mb-3')]");
-	private By errorLocator = By.xpath("//div[contains(text(),'Server Is Busy Please Try Again')]");
-
-
-
+	
+	private By agentDropDown=By.xpath("//span[normalize-space()='Project Management' or normalize-space()='All Teams']");
+	private By agentCategory=By.xpath("//button[contains(text(),'Researcher')]");
+	
 	public ResearcherAgents(WebDriver driver) {
-		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofMinutes(3));
-	}
-	
-	
-	public void checkTrendsAnalyst() throws InterruptedException 
-	{
-		WebElement agentLibBtn = wait.until(ExpectedConditions.elementToBeClickable(agentLibrary));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", agentLibBtn);
-		Thread.sleep(5000);
-		//agentLibBtn.click();
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", agentLibBtn);
-		// Select categories
-		wait.until(ExpectedConditions.elementToBeClickable(agentCategory)).click();
-		wait.until(ExpectedConditions.elementToBeClickable(researcherCategory)).click();
-
-		Thread.sleep(2000);
-
-		// Click Code Debug Agent
-		wait.until(ExpectedConditions.elementToBeClickable(trendsAnalystAgent)).click();
-
-		Thread.sleep(1000);
-
-		// Click Try Now
-		wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("(//button[contains(text(),'Try now →')])[1]"))).click();
-
-		System.out.println("Waiting for response or error...");
-
-		// ************** SMART WAIT **************
-		try {
-
-			Boolean result = wait.until(driver1 -> {
-
-				// ---- CHECK FOR RESPONSE ----
-				List<WebElement> responses = wait.until(
-						ExpectedConditions.refreshed(
-								ExpectedConditions.visibilityOfAllElementsLocatedBy(responseLocator)
-								)
-						);
-
-				if (!responses.isEmpty()) {
-					String text = responses.get(0).getText().trim();
-
-					if (text.length() > 5 &&
-							!text.equalsIgnoreCase("Server Is Busy Please Try Again"))
-					{
-						System.out.println("VALID RESPONSE FOUND: " + text);
-						return true;     // PASS
-					}
-				}
-
-				// ---- CHECK FOR ERROR ----
-				List<WebElement> errors = driver1.findElements(errorLocator);
-
-				if (!errors.isEmpty()) {
-					String errText = errors.get(0).getText();
-					Assert.fail("Agent returned ERROR: " + errText);
-				}
-
-				return false; // keep waiting
-
-			});
-
-			Assert.assertTrue(result, "Agent returned a valid response.");
-
-		} catch (TimeoutException e) {
-			Assert.fail("No response OR error received even after 3 minutes.");
-		}
-	}
-
+		super(driver);
+	}	
 
 	public void checkMarketCompetitor() throws InterruptedException 
 	{
+		validateAgentResponse(agentDropDown,agentCategory,"Competitor analysis","Competitive landscape review – Cloud SaaS market",true);
+	}
+	
 
-		WebElement agentLibBtn = wait.until(ExpectedConditions.elementToBeClickable(agentLibrary));
-		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", agentLibBtn);
-		Thread.sleep(5000);
-		//agentLibBtn.click();
-		((JavascriptExecutor) driver).executeScript("arguments[0].click();", agentLibBtn);
-
-		Thread.sleep(1500);
-		wait.until(ExpectedConditions.elementToBeClickable(marketCompAgent)).click();
-
-		Thread.sleep(1000);
-		wait.until(ExpectedConditions.elementToBeClickable(
-				By.xpath("(//button[contains(text(),'Try now →')])[1]"))).click();
-
-
-		System.out.println("Waiting for response or error...");
-
-		// ************** SMART WAIT STARTS HERE **************
-		try {
-
-			Boolean result = wait.until(driver1 -> {
-
-				// ----- CHECK IF RESPONSE ELEMENT EXISTS -----
-				List<WebElement> responses = wait.until(
-						ExpectedConditions.refreshed(
-								ExpectedConditions.visibilityOfAllElementsLocatedBy(responseLocator)
-								)
-						);
-
-				if (!responses.isEmpty()) {
-					String text = responses.get(0).getText().trim();
-
-					// ✔ response container found — ensure actual text is meaningful
-					if (text.length() > 5 &&
-							!text.equalsIgnoreCase("Server Is Busy Please Try Again"))
-					{
-						System.out.println("VALID RESPONSE FOUND: " + text);
-						return true;  // PASS
-					}
-				}
-
-				// ----- CHECK IF ERROR ELEMENT EXISTS -----
-				List<WebElement> errors = driver1.findElements(errorLocator);
-				if (!errors.isEmpty()) {
-					String errText = errors.get(0).getText();
-					Assert.fail("Agent returned ERROR: " + errText);
-				}
-
-				return false;  // continue waiting
-
-			});
-
-			// ✔ Valid response received
-			Assert.assertTrue(result, "Agent returned a valid response");
-
-		} catch (TimeoutException e) {
-
-			Assert.fail("No response OR error received even after 3 minutes. Agent may be stuck.");
-		}
+	public void checkTrendsAnalyst() throws InterruptedException 
+	{
+		validateAgentResponse(agentDropDown,agentCategory,"Trends analyst","Global tech trends by growth impact",false);
 	}
 
 }

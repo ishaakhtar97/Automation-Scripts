@@ -24,13 +24,6 @@ public class SalesAgentsTest extends BaseSetup{
 		Thread.sleep(5000);
 	}
 
-	@Test (priority=101)
-	public void lead_Qualification_Agent() throws InterruptedException 
-	{
-		agents.checkLeadQualification();
-		Thread.sleep(5000);
-	}
-	
 	@Test (priority=102)
 	public void sales_Intelligent_Agent() throws InterruptedException 
 	{

@@ -3,13 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SynoptixAI.TestClasses.MyAgentsTest">
+      <class name="SynoptixAI.TestClasses.DataRepoTest">
         <methods>
-          <include name="createAgent"/>
           <include name="setUpObject"/>
           <include name="setupSuite"/>
+          <include name="deleteRepo"/>
         </methods>
-      </class> <!-- SynoptixAI.TestClasses.MyAgentsTest -->
+      </class> <!-- SynoptixAI.TestClasses.DataRepoTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -1,6 +1,6 @@
 package SynoptixAI.Setup;
 
-import org.openqa.selenium.JavascriptExecutor;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -18,13 +18,7 @@ public class BaseSetup {
             System.out.println(">>> Launching browser...");
             
             WebDriverManager.chromedriver().setup();
-            // 2️⃣ Configure Chrome options
-           // ChromeOptions options = new ChromeOptions();
-            //options.addArguments("--start-maximized");                // open full screen
-            //options.addArguments("--force-device-scale-factor=0.9");  // set zoom to 80%
-
-            // 3️⃣ Launch Chrome with options
-           // driver = new ChromeDriver(options);
+            
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             //((JavascriptExecutor) driver).executeScript("document.body.style.zoom='80%'");

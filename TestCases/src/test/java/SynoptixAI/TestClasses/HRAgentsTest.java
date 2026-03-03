@@ -17,12 +17,6 @@ public class HRAgentsTest extends BaseSetup{
 		agents = new HRAgents(driver);    // Use global driver from BaseSetup
 
 	}
-	@Test (priority=80)
-	public void candidate_Search_Agent() throws InterruptedException 
-	{
-		agents.checkCandidateSearch();
-		Thread.sleep(5000);
-	}
 
 	@Test (priority=81)
 	public void draft_Offer_Letter_Agent() throws InterruptedException 

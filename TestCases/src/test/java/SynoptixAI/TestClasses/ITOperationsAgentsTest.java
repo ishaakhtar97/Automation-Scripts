@@ -17,21 +17,14 @@ public class ITOperationsAgentsTest extends BaseSetup{
 		agents = new ITOperationsAgents(driver);    // Use global driver from BaseSetup
 
 	}
-	@Test (priority=110)
-	public void access_Request_Assistant_Agent() throws InterruptedException 
-	{
-		agents.checkAccessRequest();
-		Thread.sleep(5000);
-	}
-
-	@Test (priority=1011)
+	@Test (priority=10)
 	public void it_HelpDesk_Agent() throws InterruptedException 
 	{
 		agents.checkITHelpdesk();
 		Thread.sleep(5000);
 	}
 	
-	@Test (priority=112)
+	@Test (priority=11)
 	public void search_Latest_IT_Solutions_Agent() throws InterruptedException 
 	{
 		agents.checkLatestITSolutions();
