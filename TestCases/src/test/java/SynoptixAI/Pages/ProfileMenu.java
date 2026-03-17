@@ -40,11 +40,11 @@ public class ProfileMenu  {
 		//wait.until(ExpectedConditions.elementToBeClickable(uploadDocBtn)).click();
 		//wait.until(ExpectedConditions.elementToBeClickable(uploadDocFromDevice)).click();
 		// Step 2: Locate input type=file
-        WebElement fileInput = wait.until(
+       /* WebElement fileInput = wait.until(
         ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@type='file']")));
 
         // Step 3: Upload ONE file
-        fileInput.sendKeys(filepath);
+        fileInput.sendKeys(filepath);*/
         wait.until(ExpectedConditions.elementToBeClickable(submit)).click();
         //wait.until(ExpectedConditions.elementToBeClickable(closeBtn)).click();
         WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(

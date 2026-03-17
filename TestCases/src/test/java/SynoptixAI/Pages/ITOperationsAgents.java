@@ -34,6 +34,6 @@ public class ITOperationsAgents extends AgentsBaseSetup{
 	
 	public void checkLatestITSolutions() throws InterruptedException 
 	{
-		validateAgentResponse(agentDropDown,agentCategory,"Search latest IT solution​​​s","Describe key requirements for IT solutions",false);
+		validateAgentResponse(agentDropDown,agentCategory,"Search latest IT","Describe key requirements for IT solutions",false);
 	}
 }

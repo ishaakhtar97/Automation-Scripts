@@ -5,11 +5,33 @@
     <classes>
       <class name="SynoptixAI.TestClasses.DataRepoTest">
         <methods>
+          <include name="uploadDocsFile"/>
+          <include name="uploadPdfFile"/>
           <include name="setUpObject"/>
           <include name="setupSuite"/>
-          <include name="deleteRepo"/>
         </methods>
       </class> <!-- SynoptixAI.TestClasses.DataRepoTest -->
+      <class name="SynoptixAI.TestClasses.MarketingAgentsTest">
+        <methods>
+          <include name="blog_Generator_Agent"/>
+          <include name="setUpObject"/>
+          <include name="setupSuite"/>
+        </methods>
+      </class> <!-- SynoptixAI.TestClasses.MarketingAgentsTest -->
+      <class name="SynoptixAI.TestClasses.ITOperationsAgentsTest">
+        <methods>
+          <include name="setUpObject"/>
+          <include name="setupSuite"/>
+          <include name="it_HelpDesk_Agent"/>
+        </methods>
+      </class> <!-- SynoptixAI.TestClasses.ITOperationsAgentsTest -->
+      <class name="SynoptixAI.TestClasses.ProjectManagementAgentsTest">
+        <methods>
+          <include name="setUpObject"/>
+          <include name="setupSuite"/>
+          <include name="risk_Assessment_Agent"/>
+        </methods>
+      </class> <!-- SynoptixAI.TestClasses.ProjectManagementAgentsTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -17,7 +17,8 @@ public class DataRepo {
 	private By dataRepo=By.xpath("//button[normalize-space()='Create First Data Repository' or normalize-space()='Create New Repository']");
 	private By dataRepoName=By.xpath("//input[@placeholder='Enter name of new Repository']");
 	private By createBtn=By.xpath("//button[normalize-space()='Create']");
-	private By newlyCreatedRepo=By.xpath("//div[@role='row']//div[@col-id='name'][normalize-space()='QA Test Repository']");
+	//private By newlyCreatedRepo=By.xpath("//div[@role='row']//div[@col-id='name'][normalize-space()='QA Test Repository']");
+	private By newlyCreatedRepo=By.xpath("//span[normalize-space()='QA Test Repository']");
 	private By uploadDocBtn=By.xpath("//button[normalize-space()='Upload Document']");
 	private By uploadDocFromDevice=By.xpath("//span[normalize-space()='Upload from this device']");
 	private By backBtn=By.xpath("//div[@class='flex items-center gap-3']//*[name()='svg']");

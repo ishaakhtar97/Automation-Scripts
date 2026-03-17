@@ -23,7 +23,7 @@ public class BaseSetup {
             driver.manage().window().maximize();
             //((JavascriptExecutor) driver).executeScript("document.body.style.zoom='80%'");
            // driver.get("https://app.synoptix.ai/");
-            driver.get("https://app.synoptix.ai//");
+            driver.get("https://testing.synoptix.ai/");
             Thread.sleep(5000);
             System.out.println(">>> Browser launched successfully!");
         }

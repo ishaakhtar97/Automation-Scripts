@@ -42,7 +42,7 @@ public class LoginTest extends BaseSetup{
 
 		// Step 1: Email
 
-		loginForm.enterEmail("isha.akhtar@synoptix.ai");
+		loginForm.enterEmail("naumantalib59@gmail.com");
 		loginForm.enterPassword("Ish@nauman97");
 		loginForm.Login();
 		Thread.sleep(9000);

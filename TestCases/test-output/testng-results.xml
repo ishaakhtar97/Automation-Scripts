@@ -1,55 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="11" passed="11" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-02-26T10:08:31 UTC" name="Suite" finished-at="2026-02-26T10:09:26 UTC" duration-ms="54732">
+  <suite started-at="2026-03-16T08:54:59 UTC" name="Suite" finished-at="2026-03-16T08:56:58 UTC" duration-ms="119264">
     <groups>
     </groups>
-    <test started-at="2026-02-26T10:08:31 UTC" name="Test" finished-at="2026-02-26T10:09:26 UTC" duration-ms="54732">
-      <class name="SynoptixAI.TestClasses.LoginTest">
-        <test-method is-config="true" signature="setupSuite()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-02-26T10:08:21 UTC" name="setupSuite" finished-at="2026-02-26T10:08:31 UTC" duration-ms="10371" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSuite -->
-        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-02-26T10:08:31 UTC" name="setUpObject" finished-at="2026-02-26T10:08:31 UTC" duration-ms="19" status="PASS">
+    <test started-at="2026-03-16T08:54:59 UTC" name="Test" finished-at="2026-03-16T08:56:58 UTC" duration-ms="119264">
+      <class name="SynoptixAI.TestClasses.ConnectionsTest">
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:55:18 UTC" name="setUpObject" finished-at="2026-03-16T08:55:18 UTC" duration-ms="17" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpObject -->
-        <test-method signature="createNewAccount()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-02-26T10:08:31 UTC" name="createNewAccount" finished-at="2026-02-26T10:08:35 UTC" duration-ms="4076" status="PASS">
+        <test-method signature="connectSharePoint()[pri:40, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:55:18 UTC" name="connectSharePoint" finished-at="2026-03-16T08:55:41 UTC" duration-ms="22888" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectSharePoint -->
+        <test-method signature="connectTeams()[pri:41, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:55:41 UTC" name="connectTeams" finished-at="2026-03-16T08:55:46 UTC" duration-ms="5389" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectTeams -->
+        <test-method signature="connectOutlook()[pri:42, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:55:47 UTC" name="connectOutlook" finished-at="2026-03-16T08:55:52 UTC" duration-ms="5510" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectOutlook -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:55:52 UTC" name="connectTeradata" finished-at="2026-03-16T08:56:06 UTC" duration-ms="13786" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:56:06 UTC" name="connectTeradata" finished-at="2026-03-16T08:56:19 UTC" duration-ms="13141" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:56:19 UTC" name="connectTeradata" finished-at="2026-03-16T08:56:32 UTC" duration-ms="13028" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:56:32 UTC" name="connectTeradata" finished-at="2026-03-16T08:56:45 UTC" duration-ms="12611" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@79079097]" started-at="2026-03-16T08:56:45 UTC" name="connectTeradata" finished-at="2026-03-16T08:56:58 UTC" duration-ms="13640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- connectTeradata -->
+      </class> <!-- SynoptixAI.TestClasses.ConnectionsTest -->
+      <class name="SynoptixAI.TestClasses.LoginTest">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-03-16T08:54:49 UTC" name="setupSuite" finished-at="2026-03-16T08:54:59 UTC" duration-ms="10295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-03-16T08:54:59 UTC" name="setUpObject" finished-at="2026-03-16T08:54:59 UTC" duration-ms="21" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpObject -->
+        <test-method signature="createNewAccount()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-03-16T08:54:59 UTC" name="createNewAccount" finished-at="2026-03-16T08:55:04 UTC" duration-ms="4806" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createNewAccount -->
-        <test-method signature="forgetPassword()[pri:1, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-02-26T10:08:35 UTC" name="forgetPassword" finished-at="2026-02-26T10:08:42 UTC" duration-ms="6574" status="PASS">
+        <test-method signature="forgetPassword()[pri:1, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-03-16T08:55:04 UTC" name="forgetPassword" finished-at="2026-03-16T08:55:09 UTC" duration-ms="4944" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- forgetPassword -->
-        <test-method signature="successfulLogin()[pri:2, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-02-26T10:08:42 UTC" name="successfulLogin" finished-at="2026-02-26T10:08:52 UTC" duration-ms="9691" status="PASS">
+        <test-method signature="successfulLogin()[pri:2, instance:SynoptixAI.TestClasses.LoginTest@489115ef]" started-at="2026-03-16T08:55:09 UTC" name="successfulLogin" finished-at="2026-03-16T08:55:18 UTC" duration-ms="9407" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulLogin -->
       </class> <!-- SynoptixAI.TestClasses.LoginTest -->
-      <class name="SynoptixAI.TestClasses.DataRepoTest">
-        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.DataRepoTest@79079097]" started-at="2026-02-26T10:08:52 UTC" name="setUpObject" finished-at="2026-02-26T10:08:52 UTC" duration-ms="25" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpObject -->
-        <test-method signature="createNewRepo()[pri:40, instance:SynoptixAI.TestClasses.DataRepoTest@79079097]" started-at="2026-02-26T10:08:52 UTC" name="createNewRepo" finished-at="2026-02-26T10:08:59 UTC" duration-ms="7277" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNewRepo -->
-        <test-method signature="uploadDocsFile()[pri:41, instance:SynoptixAI.TestClasses.DataRepoTest@79079097]" started-at="2026-02-26T10:08:59 UTC" name="uploadDocsFile" finished-at="2026-02-26T10:09:08 UTC" duration-ms="8681" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- uploadDocsFile -->
-        <test-method signature="uploadPdfFile()[pri:42, instance:SynoptixAI.TestClasses.DataRepoTest@79079097]" started-at="2026-02-26T10:09:08 UTC" name="uploadPdfFile" finished-at="2026-02-26T10:09:18 UTC" duration-ms="10197" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- uploadPdfFile -->
-        <test-method signature="deleteRepo()[pri:43, instance:SynoptixAI.TestClasses.DataRepoTest@79079097]" started-at="2026-02-26T10:09:18 UTC" name="deleteRepo" finished-at="2026-02-26T10:09:26 UTC" duration-ms="8124" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deleteRepo -->
-      </class> <!-- SynoptixAI.TestClasses.DataRepoTest -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

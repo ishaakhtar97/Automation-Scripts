@@ -21,8 +21,15 @@ public class Connections {
 	private By connectBtn=By.xpath("//div[contains(@class,'bg-gradient')]//button[normalize-space()='Connect']");
 	private By myMSAcc=By.xpath("(//div[@data-bind='text: session.tileDisplayName'])[1]");
 	private By reconnectBtn=By.xpath("//div[@role='menuitem' and normalize-space()='Reconnect']");
-
-
+	private By disconnectBtn=By.xpath("//div[@role='menuitem' and normalize-space()='Disconnect']");
+	private By yesDisconnectBtn=By.xpath("//button[normalize-space()='Yes, Disconnect']");
+	
+	private By tdHost=By.xpath("//input[@placeholder='Host']");
+	private By tdUser=By.xpath("//input[@placeholder='Username']");
+	private By tdPassword=By.xpath("//input[@placeholder='Password']");
+	private By tdDbc=By.xpath("//input[@placeholder='Database e.g# dbc']");
+	private By tdConnect=By.xpath("//button[normalize-space()='Confirm']");
+	
 	public Connections(WebDriver driver) {
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofSeconds(90));
@@ -41,17 +48,15 @@ public class Connections {
 				));
 
 		// CONNECTED → do nothing
-		if (!appCard.findElements(
-				By.xpath(".//span[normalize-space()='connected']")
-				).isEmpty()) {
+		if (!appCard.findElements(By.xpath(".//span[normalize-space()='connected']")).isEmpty())
+		{
 			System.out.println(appName + " already connected");
 			return;
 		}
 
 		// DISCONNECTED → reconnect
-		if (!appCard.findElements(
-				By.xpath(".//span[normalize-space()='disconnected']")
-				).isEmpty()) {
+		if (!appCard.findElements(By.xpath(".//span[normalize-space()='disconnected']")).isEmpty()) 
+		{
 			System.out.println(appName + " disconnected, reconnecting");
 			JavascriptExecutor js = (JavascriptExecutor) driver;
 			js.executeScript("arguments[0].scrollIntoView({block:'center'});", appCard);
@@ -177,4 +182,111 @@ public class Connections {
 		System.out.println("Microsoft Login flow completed");
 	}
 	
+	public void connectTeradataConn(String appName) throws InterruptedException
+	{
+		WebElement appCard = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//h3[normalize-space()='" + appName + "']/ancestor::div[contains(@class,'rounded-lg')]")
+				));
+
+		// CONNECTED → do nothing
+		if (!appCard.findElements(By.xpath(".//span[normalize-space()='connected']")).isEmpty())
+		{
+			System.out.println(appName + " already connected");
+			return;
+		}
+
+		// DISCONNECTED → reconnect
+		if (!appCard.findElements(By.xpath(".//span[normalize-space()='disconnected']")).isEmpty()) 
+		{
+			System.out.println(appName + " disconnected, reconnecting");
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+			js.executeScript("arguments[0].scrollIntoView({block:'center'});", appCard);
+			js.executeScript("arguments[0].click();", appCard); // opens modal
+			clickTDReconnectButton(appName);
+			return;
+		}
+
+		// NO STATUS → fresh connect
+		System.out.println("No status found, connecting " + appName);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView({block:'center'});", appCard);
+		js.executeScript("arguments[0].click();", appCard);
+		clickTDConnectButton();
+		
+	}
+	public void clickTDConnectButton() 
+	{
+		wait.until(ExpectedConditions.elementToBeClickable(connectBtn)).click();
+		wait.until(ExpectedConditions.elementToBeClickable(tdHost)).sendKeys("testing-1xvkhvmmaj3zf9u3.env.clearscape.teradata.com");
+		wait.until(ExpectedConditions.elementToBeClickable(tdUser)).sendKeys("demo_user");
+		wait.until(ExpectedConditions.elementToBeClickable(tdPassword)).sendKeys("Ish@nauman97");
+		wait.until(ExpectedConditions.elementToBeClickable(tdDbc)).sendKeys("dbc");
+		wait.until(ExpectedConditions.elementToBeClickable(tdConnect)).click();
+
+		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[contains(text(),'successfully') or contains(text(),'Success') or contains(text(),'connected')]")));
+		Assert.assertTrue(successToast.isDisplayed(),"Connection failed");
+	}
+	public void clickTDReconnectButton(String appName) 
+	{
+		WebElement appCard = wait.until(
+				ExpectedConditions.presenceOfElementLocated(
+						By.xpath("//h3[normalize-space()='" + appName + "']/ancestor::div[contains(@class,'rounded-lg')]")));
+		
+		new Actions(driver).moveToElement(appCard).perform();
+
+		WebElement optionsBtn= wait.until(ExpectedConditions.presenceOfElementLocated(
+				By.xpath("//h3[normalize-space()='" + appName + "']"+
+						"/ancestor::div[contains(@class,'relative')]" +
+						"/button[@aria-haspopup='menu']")));
+		
+		Actions actions = new Actions(driver);
+
+	    actions.moveToElement(optionsBtn)
+	           .pause(Duration.ofMillis(200))
+	           .click()
+	           .perform();
+
+	    WebElement reconnect =wait.until(ExpectedConditions.visibilityOfElementLocated(reconnectBtn));
+		
+		actions.moveToElement(reconnect)
+        .pause(Duration.ofMillis(100))
+        .click()
+        .perform();
+		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[contains(text(),'successfully') or contains(text(),'Success') or contains(text(),'connected')]")));
+		Assert.assertTrue(successToast.isDisplayed(),"Connection failed");
+	}
+	
+	public void disconnectTD(String appName)
+	{
+		WebElement appCard = wait.until(
+				ExpectedConditions.presenceOfElementLocated(
+						By.xpath("//h3[normalize-space()='" + appName + "']/ancestor::div[contains(@class,'rounded-lg')]")));
+		
+		new Actions(driver).moveToElement(appCard).perform();
+
+		WebElement optionsBtn= wait.until(ExpectedConditions.presenceOfElementLocated(
+				By.xpath("//h3[normalize-space()='" + appName + "']"+
+						"/ancestor::div[contains(@class,'relative')]" +
+						"/button[@aria-haspopup='menu']")));
+		
+		Actions actions = new Actions(driver);
+
+	    actions.moveToElement(optionsBtn)
+	           .pause(Duration.ofMillis(200))
+	           .click()
+	           .perform();
+
+	    WebElement disconnectOpt =wait.until(ExpectedConditions.visibilityOfElementLocated(disconnectBtn));
+		
+		actions.moveToElement(disconnectOpt)
+        .pause(Duration.ofMillis(100))
+        .click()
+        .perform();
+		wait.until(ExpectedConditions.elementToBeClickable(yesDisconnectBtn)).click();
+		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[contains(text(),'successfully') or contains(text(),'Success') or contains(text(),'disconnected')]")));
+		Assert.assertTrue(successToast.isDisplayed(),"Unable to disconnect");
+	}	
 }

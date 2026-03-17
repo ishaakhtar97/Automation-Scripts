@@ -23,7 +23,7 @@ public class AgentsBaseSetup {
     protected By errorLocator = By.xpath("//div[contains(text(),'Server Is Busy Please Try Again')]");
     protected By likeBtn = By.xpath("//button[@title='Like']");
     protected By modelDropdwon = By.xpath("(//div[@type='button'])[1]");
-    protected By modelGPT = By.xpath("//span[@class='flex-1'][normalize-space()='GPT 5.2']");
+    protected By modelGPT = By.xpath("//span[@class='flex-1'][normalize-space()='GPT 5.3']");
 
 	public AgentsBaseSetup(WebDriver driver) {
 		this.driver = driver;
@@ -47,6 +47,7 @@ public class AgentsBaseSetup {
 		//By agentName = By.xpath("//div[./div/h3[@title='" + agentTitle + "']]//button[normalize-space()='Try Now']");
 		By agentName = By.xpath("//div[./div/h3[contains(normalize-space(@title),normalize-space('" + agentTitle + "'))]]//button[normalize-space()='Try Now']");
 		//By agentName = By.xpath("//h3[contains(normalize-space(.),'\" + agentTitle + \"')]/ancestor::div[contains(@class,'flex-col')][1]//button[normalize-space()='Try Now']");
+		//By agentName = By.xpath("//h3[contains(.,'\" + agentTitle + \"')]/following::button[normalize-space()='Try Now'][1]");
 		WebElement agentCard = wait.until(ExpectedConditions.visibilityOfElementLocated(agentName));
 		agentCard.click();
 

@@ -40,6 +40,13 @@ public class ConnectionsTest extends BaseSetup{
 		conn.connectMSApp("Outlook");
 		Thread.sleep(2000);
 	}
-	
+	@Test (priority=43, invocationCount = 5)
+	public void connectTeradata() throws InterruptedException 
+	{
+		conn.navigateToConnScreen();
+		conn.connectTeradataConn("Teradata");
+		Thread.sleep(5000);
+		conn.disconnectTD("Teradata");
+	}
 
 }

@@ -28,7 +28,7 @@ public class MyAgents {
 	private By pptTool=By.xpath("//span[normalize-space()='Presentation Builder']");
 	private By info=By.xpath("//textarea[contains(@placeholder,'Think of your prompt')]");
 	private By deployBtn=By.xpath("	//button[normalize-space()='Deploy']");
-	private By options=By.xpath("(//button[.//*[name()='svg']])[3]");
+	private By options=By.xpath("//div[text()='PMO Agent']/ancestor::div[@role='row']//button[@title='More']");
 	//private By options=By.xpath("//button[@id='radix-_r_d_']//*[name()='svg']");
 	private By share=By.xpath("//div[normalize-space()='Share']");
 	private By edit=By.xpath("//div[normalize-space()='Edit']");
