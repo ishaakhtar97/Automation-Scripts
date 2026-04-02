@@ -23,7 +23,7 @@ public class AgentsBaseSetup {
     protected By errorLocator = By.xpath("//div[contains(text(),'Server Is Busy Please Try Again')]");
     protected By likeBtn = By.xpath("//button[@title='Like']");
     protected By modelDropdwon = By.xpath("(//div[@type='button'])[1]");
-    protected By modelGPT = By.xpath("//span[@class='flex-1'][normalize-space()='GPT 5.3']");
+    protected By modelGPT = By.xpath("//span[@class='flex-1'][normalize-space()='GPT 5.2']");
 
 	public AgentsBaseSetup(WebDriver driver) {
 		this.driver = driver;

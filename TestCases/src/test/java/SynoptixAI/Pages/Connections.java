@@ -32,7 +32,7 @@ public class Connections {
 	
 	public Connections(WebDriver driver) {
 		this.driver = driver;
-		this.wait = new WebDriverWait(driver, Duration.ofSeconds(90));
+		this.wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 	}
 
 	public void navigateToConnScreen() {
@@ -220,7 +220,7 @@ public class Connections {
 		wait.until(ExpectedConditions.elementToBeClickable(tdHost)).sendKeys("testing-1xvkhvmmaj3zf9u3.env.clearscape.teradata.com");
 		wait.until(ExpectedConditions.elementToBeClickable(tdUser)).sendKeys("demo_user");
 		wait.until(ExpectedConditions.elementToBeClickable(tdPassword)).sendKeys("Ish@nauman97");
-		wait.until(ExpectedConditions.elementToBeClickable(tdDbc)).sendKeys("dbc");
+	//	wait.until(ExpectedConditions.elementToBeClickable(tdDbc)).sendKeys("dbc");
 		wait.until(ExpectedConditions.elementToBeClickable(tdConnect)).click();
 
 		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(

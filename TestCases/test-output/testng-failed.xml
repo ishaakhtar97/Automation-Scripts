@@ -3,35 +3,18 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="SynoptixAI.TestClasses.DataRepoTest">
+      <class name="SynoptixAI.TestClasses.AgentLibraryTest">
         <methods>
-          <include name="uploadDocsFile"/>
-          <include name="uploadPdfFile"/>
+          <include name="htmlFileUpload"/>
+          <include name="jpgFileUpload"/>
+          <include name="pdfFileUpload"/>
           <include name="setUpObject"/>
+          <include name="csvFileUpload"/>
+          <include name="pngFileUpload"/>
+          <include name="xlsxFileUpload"/>
           <include name="setupSuite"/>
         </methods>
-      </class> <!-- SynoptixAI.TestClasses.DataRepoTest -->
-      <class name="SynoptixAI.TestClasses.MarketingAgentsTest">
-        <methods>
-          <include name="blog_Generator_Agent"/>
-          <include name="setUpObject"/>
-          <include name="setupSuite"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.MarketingAgentsTest -->
-      <class name="SynoptixAI.TestClasses.ITOperationsAgentsTest">
-        <methods>
-          <include name="setUpObject"/>
-          <include name="setupSuite"/>
-          <include name="it_HelpDesk_Agent"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.ITOperationsAgentsTest -->
-      <class name="SynoptixAI.TestClasses.ProjectManagementAgentsTest">
-        <methods>
-          <include name="setUpObject"/>
-          <include name="setupSuite"/>
-          <include name="risk_Assessment_Agent"/>
-        </methods>
-      </class> <!-- SynoptixAI.TestClasses.ProjectManagementAgentsTest -->
+      </class> <!-- SynoptixAI.TestClasses.AgentLibraryTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

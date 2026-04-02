@@ -87,26 +87,23 @@ public class SimpleLogin {
 		
 	}
 
-	public void enterEmail(String LoginEmail) 
+
+	public void login() throws InterruptedException 
 	{
+		waitForEmailVerification();
 		wait.until(ExpectedConditions.elementToBeClickable(backToLogin)).click();
 		WebElement emailField = wait.until(ExpectedConditions.elementToBeClickable(emailInput));
-		emailField.sendKeys(LoginEmail);
-	}
-
-	// Actions
-	public void enterPassword(String Loginpassword) {
+		emailField.sendKeys(generatedEmail);
 		WebElement passField = wait.until(ExpectedConditions.elementToBeClickable(passwordInput));
-		passField.sendKeys(Loginpassword);
-	}
-
-
-	public void Login() 
-	{
+		passField.sendKeys(password);
 		WebElement nextButton = wait.until(ExpectedConditions.elementToBeClickable(nextBtn));
 		nextButton.click();
 		
 		
 	}
 	
+	public void waitForEmailVerification() throws InterruptedException {
+	    System.out.println("⚠️ Please verify email manually. Waiting for 1 minute...");
+	    Thread.sleep(60000);
+	}
 }

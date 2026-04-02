@@ -1,15 +1,10 @@
 package SynoptixAI.TestClasses;
 
 
-import org.openqa.selenium.WebDriver;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-import SynoptixAI.Pages.AuthenticationPage;
-import SynoptixAI.Pages.DataRepo;
 import SynoptixAI.Pages.SimpleLogin;
-import SynoptixAI.Pages.LoginOptionsPage;
-import SynoptixAI.Pages.MSLogin;
-import SynoptixAI.Pages.StaySignedInPage;
 import SynoptixAI.Setup.BaseSetup;
 
 public class LoginTest extends BaseSetup{
@@ -40,11 +35,7 @@ public class LoginTest extends BaseSetup{
 	@Test (priority=2)
 	public void successfulLogin() throws InterruptedException {
 
-		// Step 1: Email
-
-		loginForm.enterEmail("naumantalib59@gmail.com");
-		loginForm.enterPassword("Ish@nauman97");
-		loginForm.Login();
+		loginForm.login();
 		Thread.sleep(9000);
 	}
 

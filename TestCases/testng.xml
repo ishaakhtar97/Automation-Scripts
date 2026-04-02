@@ -3,12 +3,14 @@
 <suite name="Suite" parallel="none" >
   <test thread-count="1" name="Test">
   <classes>
-  <class name="SynoptixAI.TestClasses.LoginTest"/>
-<class name="SynoptixAI.TestClasses.ConnectionsTest"/>
+
+   <class name="SynoptixAI.TestClasses.LoginTest"/> 
+ 	<class name="SynoptixAI.TestClasses.AgentLibraryTest"/> 
+ 	<class name="SynoptixAI.TestClasses.DataRepoTest"/>
   
   <!-- Synoptix Test Suite -->
   			<!-- Search+ Connections+ My Prompt  -->
-           <!-- <class name="SynoptixAI.TestClasses.LoginTest"/> 
+        <!-- <class name="SynoptixAI.TestClasses.LoginTest"/> 
         	<class name="SynoptixAI.TestClasses.ProfileMenuTest"/>
            <class name="SynoptixAI.TestClasses.ConnectionsTest"/>
            <class name="SynoptixAI.TestClasses.PromptLibraryTest"/>-->
@@ -27,8 +29,8 @@
            <class name="SynoptixAI.TestClasses.SalesAgentsTest"/>-->
            
            <!-- My Agents + Data Repo  -->
-          <!-- <class name="SynoptixAI.TestClasses.MyAgentsTest"/>
-           <class name="SynoptixAI.TestClasses.DataRepoTest"/> -->
+           <!--<class name="SynoptixAI.TestClasses.MyAgentsTest"/>
+           <class name="SynoptixAI.TestClasses.DataRepoTest"/>-->
   <!-- Complete Suite -->
            
            

@@ -30,12 +30,13 @@ public class ProfileMenu  {
 	private By closeBtn = By.xpath("//button[contains(@class,'-top-3') and contains(@class,'-right-3')]");
 
 
-	public void reportBug(String filepath)
+	public void reportBug(String filepath) throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.elementToBeClickable(closeBtn)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(profileMenu)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(reportBug)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(bugDesc)).sendKeys("Issue faced when login, Image attached");
+		Thread.sleep(2000);
 		//wait.until(ExpectedConditions.elementToBeClickable(uploadDocBtn)).click();
 		//wait.until(ExpectedConditions.elementToBeClickable(uploadDocBtn)).click();
 		//wait.until(ExpectedConditions.elementToBeClickable(uploadDocFromDevice)).click();
@@ -53,12 +54,13 @@ public class ProfileMenu  {
 		
 		
 	}
-	public void aiInsctructions()
+	public void aiInsctructions() throws InterruptedException
 	{
 		//wait.until(ExpectedConditions.elementToBeClickable(closeBtn)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(profileMenu)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(giveAIInstructions)).click();
 		wait.until(ExpectedConditions.elementToBeClickable(instructions)).sendKeys("You are an AI agent who will help me in everything");
+		Thread.sleep(3000);
 		wait.until(ExpectedConditions.elementToBeClickable(addBtn)).click();
 		 WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
 					By.xpath("//*[contains(text(),'Successfully') or contains(text(),'successfully')]")));
