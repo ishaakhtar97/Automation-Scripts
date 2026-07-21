@@ -180,4 +180,38 @@ public class MyAgents {
 			System.out.println("Agent may not shared");
 		}
 	}
+	
+	public void uploadFile(String filepath) throws InterruptedException 
+	{
+
+		//wait.until(ExpectedConditions.elementToBeClickable(addFileBtn)).click();
+		//wait.until(ExpectedConditions.elementToBeClickable(uploadBtn)).click();
+		//wait.until(ExpectedConditions.elementToBeClickable(uploadBtn)).click();
+		WebElement fileInput = wait.until(
+				ExpectedConditions.presenceOfElementLocated(
+						By.xpath("//input[@type='file']")
+						));
+
+		// Step 3: Upload ONE file
+		fileInput.sendKeys(filepath);
+		WebElement successToast = wait.until(ExpectedConditions.visibilityOfElementLocated(
+				By.xpath("//*[contains(text(),'Successfully') or contains(text(),'processed successfully')]")));
+		Assert.assertTrue(successToast.isDisplayed(),"File uploading failed");
+
+
+	}
+
+	public void goToAgentWindow() throws InterruptedException 
+	{
+		WebElement agentBtn = wait.until(ExpectedConditions.elementToBeClickable(myAgents));
+		agentBtn.click();
+		Thread.sleep(2000);
+		WebElement optionBtn = wait.until(ExpectedConditions.elementToBeClickable(options));
+		optionBtn.click();
+		Thread.sleep(1000);
+		WebElement editBtn = wait.until(ExpectedConditions.elementToBeClickable(edit));
+		editBtn.click();
+		
+	}
+
 }

@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>24/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>43/3/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Apr 02 12:23:39 UTC 2026</td>
+<td>Started on:</td><td>Mon Jun 08 08:52:44 UTC 2026</td>
 </tr>
-<tr><td>Total time:</td><td>223 seconds (223007 ms)</td>
+<tr><td>Total time:</td><td>445 seconds (445976 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,197 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.deleteRepo()'><b>deleteRepo</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;flex items-center gap-3&apos;]//*[name()=&apos;svg&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at SynoptixAI.Pages.DataRepo.deleteRepository(DataRepo.java:71)
+	at SynoptixAI.TestClasses.DataRepoTest.deleteRepo(DataRepoTest.java:95)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2069419640", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2069419640'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class=&apos;flex items-center gap-3&apos;]//*[name()=&apos;svg&apos;] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at SynoptixAI.Pages.DataRepo.deleteRepository(DataRepo.java:71)
+	at SynoptixAI.TestClasses.DataRepoTest.deleteRepo(DataRepoTest.java:95)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>30</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.PromptLibraryTest.deletePrompt()'><b>deletePrompt</b><br>Test class: SynoptixAI.TestClasses.PromptLibraryTest</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(text(),&apos;Delete&apos;)] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at SynoptixAI.Pages.PromptLibrary.promptDeletion(PromptLibrary.java:98)
+	at SynoptixAI.TestClasses.PromptLibraryTest.deletePrompt(PromptLibraryTest.java:34)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace457684981", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace457684981'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(text(),&apos;Delete&apos;)] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at SynoptixAI.Pages.PromptLibrary.promptDeletion(PromptLibrary.java:98)
+	at SynoptixAI.TestClasses.PromptLibraryTest.deletePrompt(PromptLibraryTest.java:34)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>30</td>
+<td>SynoptixAI.TestClasses.PromptLibraryTest@279fedbd</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.PromptLibraryTest.editPrompt()'><b>editPrompt</b><br>Test class: SynoptixAI.TestClasses.PromptLibraryTest</td>
+<td><div><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;absolute top-3 right-3 p-1 rounded hover:bg-gray-100&quot;&gt;...&lt;/button&gt; is not clickable at point (1894, 26). Other element would receive the click: &lt;div class=&quot;bg-white text-slate-800 rounded-xl shadow-[0px_4px_20px_0px_#00000008] px-4 py-3 text-base font-semibold border border-gray-200 flex items-center justify-between gap-3 min-w-[320px]&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=148.0.7778.218)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74e528a137fd9b099c04ff646284cd15, clickElement {id=f.5DD8079D4DB68A3B48D826FC9EB02F58.d.73BECF5A14BDC9974518CF393E44079D.e.1657}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74e528a137fd9b099c04ff646284cd15)] -&gt; xpath: (//button[.//*[name()=&apos;svg&apos;]])[4]]
+Session ID: 74e528a137fd9b099c04ff646284cd15
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at SynoptixAI.Pages.PromptLibrary.promptUpdation(PromptLibrary.java:83)
+	at SynoptixAI.TestClasses.PromptLibraryTest.editPrompt(PromptLibraryTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1449926257", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1449926257'><pre>org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button class=&quot;absolute top-3 right-3 p-1 rounded hover:bg-gray-100&quot;&gt;...&lt;/button&gt; is not clickable at point (1894, 26). Other element would receive the click: &lt;div class=&quot;bg-white text-slate-800 rounded-xl shadow-[0px_4px_20px_0px_#00000008] px-4 py-3 text-base font-semibold border border-gray-200 flex items-center justify-between gap-3 min-w-[320px]&quot;&gt;...&lt;/div&gt;
+  (Session info: chrome=148.0.7778.218)
+Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74e528a137fd9b099c04ff646284cd15, clickElement {id=f.5DD8079D4DB68A3B48D826FC9EB02F58.d.73BECF5A14BDC9974518CF393E44079D.e.1657}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74e528a137fd9b099c04ff646284cd15)] -&gt; xpath: (//button[.//*[name()=&apos;svg&apos;]])[4]]
+Session ID: 74e528a137fd9b099c04ff646284cd15
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+	at SynoptixAI.Pages.PromptLibrary.promptUpdation(PromptLibrary.java:83)
+	at SynoptixAI.TestClasses.PromptLibraryTest.editPrompt(PromptLibraryTest.java:28)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+	at org.testng.TestNG.runSuites(TestNG.java:1112)
+	at org.testng.TestNG.run(TestNG.java:1079)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+</pre></div></td>
+<td>1</td>
+<td>SynoptixAI.TestClasses.PromptLibraryTest@279fedbd</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,125 +267,220 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.jpgFileUpload()'><b>jpgFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
-<td></td>
-<td>8</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.pptFileUpload()'><b>pptFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
-<td></td>
-<td>5</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.xlsxFileUpload()'><b>xlsxFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
-<td></td>
-<td>5</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.csvFileUpload()'><b>csvFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
-<td></td>
-<td>5</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.docsFileUpload()'><b>docsFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
-<td></td>
-<td>8</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.htmlFileUpload()'><b>htmlFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
-<td></td>
-<td>5</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.createNewRepo()'><b>createNewRepo</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td title='SynoptixAI.TestClasses.SearchTest.docsFileUpload()'><b>docsFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
 <td></td>
 <td>6</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.pngFileUpload()'><b>pngFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
-<td></td>
-<td>8</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.txtFileUpload()'><b>txtFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td title='SynoptixAI.TestClasses.SearchTest.htmlFileUpload()'><b>htmlFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
 <td></td>
 <td>5</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.deployAgent()'><b>deployAgent</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
+<td title='SynoptixAI.TestClasses.ConnectionsTest.connectTeradata()'><b>connectTeradata</b><br>Test class: SynoptixAI.TestClasses.ConnectionsTest</td>
 <td></td>
-<td>4</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
+<td>8</td>
+<td>SynoptixAI.TestClasses.ConnectionsTest@752325ad</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.LoginTest.successfulLogin()'><b>successfulLogin</b><br>Test class: SynoptixAI.TestClasses.LoginTest</td>
-<td></td>
-<td>69</td>
-<td>SynoptixAI.TestClasses.LoginTest@4e08711f</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.pngFileUpload()'><b>pngFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
-<td></td>
-<td>7</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.LoginTest.forgetPassword()'><b>forgetPassword</b><br>Test class: SynoptixAI.TestClasses.LoginTest</td>
-<td></td>
-<td>4</td>
-<td>SynoptixAI.TestClasses.LoginTest@4e08711f</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.pdfFileUpload()'><b>pdfFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.editAgent()'><b>editAgent</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
 <td></td>
 <td>9</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.csvFileUpload()'><b>csvFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
-<td></td>
-<td>6</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.LoginTest.createNewAccount()'><b>createNewAccount</b><br>Test class: SynoptixAI.TestClasses.LoginTest</td>
-<td></td>
-<td>4</td>
-<td>SynoptixAI.TestClasses.LoginTest@4e08711f</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.xlsxFileUpload()'><b>xlsxFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td title='SynoptixAI.TestClasses.SearchTest.txtFileUpload()'><b>txtFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
 <td></td>
 <td>5</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.pptFileUpload()'><b>pptFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.xlsxFileUpload()'><b>xlsxFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
 <td></td>
 <td>5</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.deleteRepo()'><b>deleteRepo</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td title='SynoptixAI.TestClasses.ConnectionsTest.connectSharePoint()'><b>connectSharePoint</b><br>Test class: SynoptixAI.TestClasses.ConnectionsTest</td>
+<td></td>
+<td>27</td>
+<td>SynoptixAI.TestClasses.ConnectionsTest@752325ad</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.jpgFileUpload()'><b>jpgFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
 <td></td>
 <td>8</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.txtFileUpload()'><b>txtFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
 <tr>
 <td title='SynoptixAI.TestClasses.DataRepoTest.docsFileUpload()'><b>docsFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
 <td></td>
 <td>6</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.htmlFileUpload()'><b>htmlFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
-<td></td>
-<td>5</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
-<tr>
-<td title='SynoptixAI.TestClasses.DataRepoTest.jpgFileUpload()'><b>jpgFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.pngFileUpload()'><b>pngFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
 <td></td>
 <td>8</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.txtFileUpload()'><b>txtFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SignUpTest.forgetPassword()'><b>forgetPassword</b><br>Test class: SynoptixAI.TestClasses.SignUpTest</td>
+<td></td>
+<td>4</td>
+<td>SynoptixAI.TestClasses.SignUpTest@1ce24091</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.csvFileUpload()'><b>csvFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>6</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.ConnectionsTest.connectTeradata()'><b>connectTeradata</b><br>Test class: SynoptixAI.TestClasses.ConnectionsTest</td>
+<td></td>
+<td>8</td>
+<td>SynoptixAI.TestClasses.ConnectionsTest@752325ad</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.ConnectionsTest.connectTeradata()'><b>connectTeradata</b><br>Test class: SynoptixAI.TestClasses.ConnectionsTest</td>
+<td></td>
+<td>8</td>
+<td>SynoptixAI.TestClasses.ConnectionsTest@752325ad</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.ConnectionsTest.connectTeradata()'><b>connectTeradata</b><br>Test class: SynoptixAI.TestClasses.ConnectionsTest</td>
+<td></td>
+<td>8</td>
+<td>SynoptixAI.TestClasses.ConnectionsTest@752325ad</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.ConnectionsTest.connectTeradata()'><b>connectTeradata</b><br>Test class: SynoptixAI.TestClasses.ConnectionsTest</td>
+<td></td>
+<td>8</td>
+<td>SynoptixAI.TestClasses.ConnectionsTest@752325ad</td></tr>
 <tr>
 <td title='SynoptixAI.TestClasses.DataRepoTest.pdfFileUpload()'><b>pdfFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
 <td></td>
 <td>8</td>
-<td>SynoptixAI.TestClasses.DataRepoTest@367ffa75</td></tr>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
 <tr>
-<td title='SynoptixAI.TestClasses.AgentLibraryTest.txtFileUpload()'><b>txtFileUpload</b><br>Test class: SynoptixAI.TestClasses.AgentLibraryTest</td>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.htmlFileUpload()'><b>htmlFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
 <td></td>
 <td>5</td>
-<td>SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31</td></tr>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.htmlFileUpload()'><b>htmlFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.pptFileUpload()'><b>pptFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.LoginTest.successfulLogin()'><b>successfulLogin</b><br>Test class: SynoptixAI.TestClasses.LoginTest</td>
+<td></td>
+<td>69</td>
+<td>SynoptixAI.TestClasses.LoginTest@3a52dba3</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.pptFileUpload()'><b>pptFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.createNewRepo()'><b>createNewRepo</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>7</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.csvFileUpload()'><b>csvFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.docsFileUpload()'><b>docsFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
+<td></td>
+<td>9</td>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.jpgFileUpload()'><b>jpgFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>8</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.jpgFileUpload()'><b>jpgFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>8</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.xlsxFileUpload()'><b>xlsxFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.csvFileUpload()'><b>csvFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.editHistory()'><b>editHistory</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>6</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.PromptLibraryTest.createPrompt()'><b>createPrompt</b><br>Test class: SynoptixAI.TestClasses.PromptLibraryTest</td>
+<td></td>
+<td>6</td>
+<td>SynoptixAI.TestClasses.PromptLibraryTest@279fedbd</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.pngFileUpload()'><b>pngFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>7</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.pdfFileUpload()'><b>pdfFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>9</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.deleteHistory()'><b>deleteHistory</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SearchTest.pptFileUpload()'><b>pptFileUpload</b><br>Test class: SynoptixAI.TestClasses.SearchTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.SearchTest@2a5c8d3f</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.deleteAgent()'><b>deleteAgent</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
+<td></td>
+<td>6</td>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.SignUpTest.createNewAccount()'><b>createNewAccount</b><br>Test class: SynoptixAI.TestClasses.SignUpTest</td>
+<td></td>
+<td>4</td>
+<td>SynoptixAI.TestClasses.SignUpTest@1ce24091</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.pdfFileUpload()'><b>pdfFileUpload</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
+<td></td>
+<td>8</td>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.MyAgentsTest.createAgent()'><b>createAgent</b><br>Test class: SynoptixAI.TestClasses.MyAgentsTest</td>
+<td></td>
+<td>9</td>
+<td>SynoptixAI.TestClasses.MyAgentsTest@b3ca52e</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.pngFileUpload()'><b>pngFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>7</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
+<tr>
+<td title='SynoptixAI.TestClasses.DataRepoTest.xlsxFileUpload()'><b>xlsxFileUpload</b><br>Test class: SynoptixAI.TestClasses.DataRepoTest</td>
+<td></td>
+<td>5</td>
+<td>SynoptixAI.TestClasses.DataRepoTest@45c7e403</td></tr>
 </table><p>
 </body>
 </html>

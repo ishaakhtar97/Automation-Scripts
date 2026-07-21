@@ -25,7 +25,8 @@ public class AgentsBaseSetup {
     protected By modelDropdwon = By.xpath("(//div[@type='button'])[1]");
     protected By modelGPT = By.xpath("//span[@class='flex-1'][normalize-space()='GPT 5.2']");
 
-	public AgentsBaseSetup(WebDriver driver) {
+	public AgentsBaseSetup(WebDriver driver)
+	{
 		this.driver = driver;
 		this.wait = new WebDriverWait(driver, Duration.ofMinutes(3));
 	}

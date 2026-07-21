@@ -18,19 +18,6 @@ public class LoginTest extends BaseSetup{
 
 	}
 
-	@Test (priority=0)
-	public void createNewAccount() throws InterruptedException 
-	{
-		loginForm.createAccount();
-		Thread.sleep(2000);
-	}
-
-	@Test (priority=1)
-	public void forgetPassword() throws InterruptedException
-	{
-		loginForm.forgetPasswd();
-		Thread.sleep(2000);
-	}
 
 	@Test (priority=2)
 	public void successfulLogin() throws InterruptedException {

@@ -27,7 +27,7 @@ public class Connections {
 	private By tdHost=By.xpath("//input[@placeholder='Host']");
 	private By tdUser=By.xpath("//input[@placeholder='Username']");
 	private By tdPassword=By.xpath("//input[@placeholder='Password']");
-	private By tdDbc=By.xpath("//input[@placeholder='Database e.g# dbc']");
+	//private By tdDbc=By.xpath("//input[@placeholder='Database e.g# dbc']");
 	private By tdConnect=By.xpath("//button[normalize-space()='Confirm']");
 	
 	public Connections(WebDriver driver) {
@@ -217,9 +217,9 @@ public class Connections {
 	public void clickTDConnectButton() 
 	{
 		wait.until(ExpectedConditions.elementToBeClickable(connectBtn)).click();
-		wait.until(ExpectedConditions.elementToBeClickable(tdHost)).sendKeys("testing-1xvkhvmmaj3zf9u3.env.clearscape.teradata.com");
+		wait.until(ExpectedConditions.elementToBeClickable(tdHost)).sendKeys("innovation-1xvkhvmmaj3zf9u3.env.trial.teradata.com");
 		wait.until(ExpectedConditions.elementToBeClickable(tdUser)).sendKeys("demo_user");
-		wait.until(ExpectedConditions.elementToBeClickable(tdPassword)).sendKeys("Ish@nauman97");
+		wait.until(ExpectedConditions.elementToBeClickable(tdPassword)).sendKeys("Innovation@1");
 	//	wait.until(ExpectedConditions.elementToBeClickable(tdDbc)).sendKeys("dbc");
 		wait.until(ExpectedConditions.elementToBeClickable(tdConnect)).click();
 

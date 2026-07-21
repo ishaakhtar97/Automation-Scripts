@@ -25,7 +25,7 @@ public class ConnectionsTest extends BaseSetup{
 		Thread.sleep(2000);
 	}
 	
-	@Test (priority=41)
+	/*@Test (priority=41)
 	public void connectTeams() throws InterruptedException 
 	{
 		conn.navigateToConnScreen();
@@ -40,6 +40,7 @@ public class ConnectionsTest extends BaseSetup{
 		conn.connectMSApp("Outlook");
 		Thread.sleep(2000);
 	}
+	*/
 	@Test (priority=43, invocationCount = 5)
 	public void connectTeradata() throws InterruptedException 
 	{

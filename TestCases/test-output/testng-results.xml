@@ -1,125 +1,400 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="24" passed="24" failed="0" skipped="0">
+<testng-results ignored="0" total="46" passed="43" failed="3" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-02T12:23:39 UTC" name="Suite" finished-at="2026-04-02T12:27:22 UTC" duration-ms="223007">
+  <suite started-at="2026-06-08T08:52:44 UTC" name="Suite" finished-at="2026-06-08T09:00:10 UTC" duration-ms="445976">
     <groups>
     </groups>
-    <test started-at="2026-04-02T12:23:39 UTC" name="Test" finished-at="2026-04-02T12:27:22 UTC" duration-ms="223007">
-      <class name="SynoptixAI.TestClasses.AgentLibraryTest">
-        <test-method signature="deployAgent()[pri:15, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:24:57 UTC" name="deployAgent" finished-at="2026-04-02T12:25:02 UTC" duration-ms="4924" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- deployAgent -->
-        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:24:57 UTC" name="setUpObject" finished-at="2026-04-02T12:24:57 UTC" duration-ms="0" status="PASS">
+    <test started-at="2026-06-08T08:52:44 UTC" name="Test" finished-at="2026-06-08T09:00:10 UTC" duration-ms="445976">
+      <class name="SynoptixAI.TestClasses.ConnectionsTest">
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.ConnectionsTest@752325ad]" started-at="2026-06-08T08:55:15 UTC" name="setUpObject" finished-at="2026-06-08T08:55:15 UTC" duration-ms="15" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpObject -->
-        <test-method signature="docsFileUpload()[pri:41, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:02 UTC" name="docsFileUpload" finished-at="2026-04-02T12:25:10 UTC" duration-ms="8275" status="PASS">
+        <test-method signature="connectSharePoint()[pri:40, instance:SynoptixAI.TestClasses.ConnectionsTest@752325ad]" started-at="2026-06-08T08:55:15 UTC" name="connectSharePoint" finished-at="2026-06-08T08:55:42 UTC" duration-ms="27362" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- docsFileUpload -->
-        <test-method signature="pdfFileUpload()[pri:42, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:10 UTC" name="pdfFileUpload" finished-at="2026-04-02T12:25:20 UTC" duration-ms="9219" status="PASS">
+        </test-method> <!-- connectSharePoint -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@752325ad]" started-at="2026-06-08T08:55:42 UTC" name="connectTeradata" finished-at="2026-06-08T08:55:50 UTC" duration-ms="8450" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pdfFileUpload -->
-        <test-method signature="pngFileUpload()[pri:43, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:20 UTC" name="pngFileUpload" finished-at="2026-04-02T12:25:28 UTC" duration-ms="8687" status="PASS">
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@752325ad]" started-at="2026-06-08T08:55:50 UTC" name="connectTeradata" finished-at="2026-06-08T08:55:59 UTC" duration-ms="8815" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- pngFileUpload -->
-        <test-method signature="jpgFileUpload()[pri:44, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:28 UTC" name="jpgFileUpload" finished-at="2026-04-02T12:25:37 UTC" duration-ms="8735" status="PASS">
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@752325ad]" started-at="2026-06-08T08:55:59 UTC" name="connectTeradata" finished-at="2026-06-08T08:56:08 UTC" duration-ms="8834" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- jpgFileUpload -->
-        <test-method signature="xlsxFileUpload()[pri:45, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:37 UTC" name="xlsxFileUpload" finished-at="2026-04-02T12:25:43 UTC" duration-ms="5596" status="PASS">
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@752325ad]" started-at="2026-06-08T08:56:08 UTC" name="connectTeradata" finished-at="2026-06-08T08:56:17 UTC" duration-ms="8688" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- xlsxFileUpload -->
-        <test-method signature="csvFileUpload()[pri:46, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:43 UTC" name="csvFileUpload" finished-at="2026-04-02T12:25:48 UTC" duration-ms="5601" status="PASS">
+        </test-method> <!-- connectTeradata -->
+        <test-method signature="connectTeradata()[pri:43, instance:SynoptixAI.TestClasses.ConnectionsTest@752325ad]" started-at="2026-06-08T08:56:17 UTC" name="connectTeradata" finished-at="2026-06-08T08:56:25 UTC" duration-ms="8761" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- csvFileUpload -->
-        <test-method signature="pptFileUpload()[pri:47, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:48 UTC" name="pptFileUpload" finished-at="2026-04-02T12:25:54 UTC" duration-ms="5605" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- pptFileUpload -->
-        <test-method signature="txtFileUpload()[pri:48, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:54 UTC" name="txtFileUpload" finished-at="2026-04-02T12:25:59 UTC" duration-ms="5587" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- txtFileUpload -->
-        <test-method signature="htmlFileUpload()[pri:49, instance:SynoptixAI.TestClasses.AgentLibraryTest@2cd76f31]" started-at="2026-04-02T12:25:59 UTC" name="htmlFileUpload" finished-at="2026-04-02T12:26:05 UTC" duration-ms="5599" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- htmlFileUpload -->
-      </class> <!-- SynoptixAI.TestClasses.AgentLibraryTest -->
+        </test-method> <!-- connectTeradata -->
+      </class> <!-- SynoptixAI.TestClasses.ConnectionsTest -->
       <class name="SynoptixAI.TestClasses.LoginTest">
-        <test-method is-config="true" signature="setupSuite()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@4e08711f]" started-at="2026-04-02T12:23:29 UTC" name="setupSuite" finished-at="2026-04-02T12:23:39 UTC" duration-ms="9232" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setupSuite -->
-        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@4e08711f]" started-at="2026-04-02T12:23:39 UTC" name="setUpObject" finished-at="2026-04-02T12:23:39 UTC" duration-ms="22" status="PASS">
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@3a52dba3]" started-at="2026-06-08T08:52:53 UTC" name="setUpObject" finished-at="2026-06-08T08:52:53 UTC" duration-ms="2" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpObject -->
-        <test-method signature="createNewAccount()[pri:0, instance:SynoptixAI.TestClasses.LoginTest@4e08711f]" started-at="2026-04-02T12:23:39 UTC" name="createNewAccount" finished-at="2026-04-02T12:23:43 UTC" duration-ms="4592" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNewAccount -->
-        <test-method signature="forgetPassword()[pri:1, instance:SynoptixAI.TestClasses.LoginTest@4e08711f]" started-at="2026-04-02T12:23:43 UTC" name="forgetPassword" finished-at="2026-04-02T12:23:48 UTC" duration-ms="4524" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- forgetPassword -->
-        <test-method signature="successfulLogin()[pri:2, instance:SynoptixAI.TestClasses.LoginTest@4e08711f]" started-at="2026-04-02T12:23:48 UTC" name="successfulLogin" finished-at="2026-04-02T12:24:57 UTC" duration-ms="69454" status="PASS">
+        <test-method signature="successfulLogin()[pri:2, instance:SynoptixAI.TestClasses.LoginTest@3a52dba3]" started-at="2026-06-08T08:52:53 UTC" name="successfulLogin" finished-at="2026-06-08T08:54:03 UTC" duration-ms="69527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- successfulLogin -->
       </class> <!-- SynoptixAI.TestClasses.LoginTest -->
-      <class name="SynoptixAI.TestClasses.DataRepoTest">
-        <test-method signature="createNewRepo()[pri:40, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:05 UTC" name="createNewRepo" finished-at="2026-04-02T12:26:12 UTC" duration-ms="6728" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createNewRepo -->
-        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:05 UTC" name="setUpObject" finished-at="2026-04-02T12:26:05 UTC" duration-ms="0" status="PASS">
+      <class name="SynoptixAI.TestClasses.PromptLibraryTest">
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.PromptLibraryTest@279fedbd]" started-at="2026-06-08T08:56:25 UTC" name="setUpObject" finished-at="2026-06-08T08:56:26 UTC" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpObject -->
-        <test-method signature="docsFileUpload()[pri:41, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:12 UTC" name="docsFileUpload" finished-at="2026-04-02T12:26:19 UTC" duration-ms="6877" status="PASS">
+        <test-method signature="createPrompt()[pri:5, instance:SynoptixAI.TestClasses.PromptLibraryTest@279fedbd]" started-at="2026-06-08T08:56:26 UTC" name="createPrompt" finished-at="2026-06-08T08:56:32 UTC" duration-ms="6418" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createPrompt -->
+        <test-method signature="editPrompt()[pri:6, instance:SynoptixAI.TestClasses.PromptLibraryTest@279fedbd]" started-at="2026-06-08T08:56:32 UTC" name="editPrompt" finished-at="2026-06-08T08:56:33 UTC" duration-ms="1112" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
+            <message>
+              <![CDATA[element click intercepted: Element <button class="absolute top-3 right-3 p-1 rounded hover:bg-gray-100">...</button> is not clickable at point (1894, 26). Other element would receive the click: <div class="bg-white text-slate-800 rounded-xl shadow-[0px_4px_20px_0px_#00000008] px-4 py-3 text-base font-semibold border border-gray-200 flex items-center justify-between gap-3 min-w-[320px]">...</div>
+  (Session info: chrome=148.0.7778.218)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74e528a137fd9b099c04ff646284cd15, clickElement {id=f.5DD8079D4DB68A3B48D826FC9EB02F58.d.73BECF5A14BDC9974518CF393E44079D.e.1657}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74e528a137fd9b099c04ff646284cd15)] -> xpath: (//button[.//*[name()='svg']])[4]]
+Session ID: 74e528a137fd9b099c04ff646284cd15]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button class="absolute top-3 right-3 p-1 rounded hover:bg-gray-100">...</button> is not clickable at point (1894, 26). Other element would receive the click: <div class="bg-white text-slate-800 rounded-xl shadow-[0px_4px_20px_0px_#00000008] px-4 py-3 text-base font-semibold border border-gray-200 flex items-center justify-between gap-3 min-w-[320px]">...</div>
+  (Session info: chrome=148.0.7778.218)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [74e528a137fd9b099c04ff646284cd15, clickElement {id=f.5DD8079D4DB68A3B48D826FC9EB02F58.d.73BECF5A14BDC9974518CF393E44079D.e.1657}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (74e528a137fd9b099c04ff646284cd15)] -> xpath: (//button[.//*[name()='svg']])[4]]
+Session ID: 74e528a137fd9b099c04ff646284cd15
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
+at SynoptixAI.Pages.PromptLibrary.promptUpdation(PromptLibrary.java:83)
+at SynoptixAI.TestClasses.PromptLibraryTest.editPrompt(PromptLibraryTest.java:28)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editPrompt -->
+        <test-method signature="deletePrompt()[pri:7, instance:SynoptixAI.TestClasses.PromptLibraryTest@279fedbd]" started-at="2026-06-08T08:56:33 UTC" name="deletePrompt" finished-at="2026-06-08T08:57:04 UTC" duration-ms="30654" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(text(),'Delete')] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[contains(text(),'Delete')] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at SynoptixAI.Pages.PromptLibrary.promptDeletion(PromptLibrary.java:98)
+at SynoptixAI.TestClasses.PromptLibraryTest.deletePrompt(PromptLibraryTest.java:34)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deletePrompt -->
+      </class> <!-- SynoptixAI.TestClasses.PromptLibraryTest -->
+      <class name="SynoptixAI.TestClasses.SignUpTest">
+        <test-method is-config="true" signature="setupSuite()[pri:0, instance:SynoptixAI.TestClasses.SignUpTest@1ce24091]" started-at="2026-06-08T08:52:37 UTC" name="setupSuite" finished-at="2026-06-08T08:52:44 UTC" duration-ms="7756" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupSuite -->
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.SignUpTest@1ce24091]" started-at="2026-06-08T08:52:44 UTC" name="setUpObject" finished-at="2026-06-08T08:52:44 UTC" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpObject -->
+        <test-method signature="createNewAccount()[pri:0, instance:SynoptixAI.TestClasses.SignUpTest@1ce24091]" started-at="2026-06-08T08:52:44 UTC" name="createNewAccount" finished-at="2026-06-08T08:52:49 UTC" duration-ms="4615" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewAccount -->
+        <test-method signature="forgetPassword()[pri:1, instance:SynoptixAI.TestClasses.SignUpTest@1ce24091]" started-at="2026-06-08T08:52:49 UTC" name="forgetPassword" finished-at="2026-06-08T08:52:53 UTC" duration-ms="4059" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- forgetPassword -->
+      </class> <!-- SynoptixAI.TestClasses.SignUpTest -->
+      <class name="SynoptixAI.TestClasses.MyAgentsTest">
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:04 UTC" name="setUpObject" finished-at="2026-06-08T08:57:04 UTC" duration-ms="26" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpObject -->
+        <test-method signature="createAgent()[pri:10, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:04 UTC" name="createAgent" finished-at="2026-06-08T08:57:13 UTC" duration-ms="9045" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createAgent -->
+        <test-method signature="editAgent()[pri:11, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:13 UTC" name="editAgent" finished-at="2026-06-08T08:57:22 UTC" duration-ms="9359" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editAgent -->
+        <test-method signature="docsFileUpload()[pri:41, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:22 UTC" name="docsFileUpload" finished-at="2026-06-08T08:57:31 UTC" duration-ms="9323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- docsFileUpload -->
-        <test-method signature="pdfFileUpload()[pri:42, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:19 UTC" name="pdfFileUpload" finished-at="2026-04-02T12:26:28 UTC" duration-ms="8810" status="PASS">
+        <test-method signature="pdfFileUpload()[pri:42, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:31 UTC" name="pdfFileUpload" finished-at="2026-06-08T08:57:40 UTC" duration-ms="8666" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pdfFileUpload -->
-        <test-method signature="pngFileUpload()[pri:43, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:28 UTC" name="pngFileUpload" finished-at="2026-04-02T12:26:35 UTC" duration-ms="7817" status="PASS">
+        <test-method signature="pngFileUpload()[pri:43, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:40 UTC" name="pngFileUpload" finished-at="2026-06-08T08:57:48 UTC" duration-ms="8170" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pngFileUpload -->
-        <test-method signature="jpgFileUpload()[pri:44, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:35 UTC" name="jpgFileUpload" finished-at="2026-04-02T12:26:44 UTC" duration-ms="8838" status="PASS">
+        <test-method signature="jpgFileUpload()[pri:44, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:48 UTC" name="jpgFileUpload" finished-at="2026-06-08T08:57:57 UTC" duration-ms="8681" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- jpgFileUpload -->
-        <test-method signature="xlsxFileUpload()[pri:45, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:44 UTC" name="xlsxFileUpload" finished-at="2026-04-02T12:26:50 UTC" duration-ms="5765" status="PASS">
+        <test-method signature="xlsxFileUpload()[pri:45, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:57:57 UTC" name="xlsxFileUpload" finished-at="2026-06-08T08:58:03 UTC" duration-ms="5580" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- xlsxFileUpload -->
-        <test-method signature="csvFileUpload()[pri:46, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:50 UTC" name="csvFileUpload" finished-at="2026-04-02T12:26:56 UTC" duration-ms="6285" status="PASS">
+        <test-method signature="csvFileUpload()[pri:46, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:58:03 UTC" name="csvFileUpload" finished-at="2026-06-08T08:58:08 UTC" duration-ms="5579" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- csvFileUpload -->
-        <test-method signature="pptFileUpload()[pri:47, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:26:56 UTC" name="pptFileUpload" finished-at="2026-04-02T12:27:02 UTC" duration-ms="5781" status="PASS">
+        <test-method signature="pptFileUpload()[pri:47, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:58:08 UTC" name="pptFileUpload" finished-at="2026-06-08T08:58:14 UTC" duration-ms="5577" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pptFileUpload -->
-        <test-method signature="txtFileUpload()[pri:48, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:27:02 UTC" name="txtFileUpload" finished-at="2026-04-02T12:27:08 UTC" duration-ms="5766" status="PASS">
+        <test-method signature="txtFileUpload()[pri:48, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:58:14 UTC" name="txtFileUpload" finished-at="2026-06-08T08:58:19 UTC" duration-ms="5578" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- txtFileUpload -->
-        <test-method signature="htmlFileUpload()[pri:49, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:27:08 UTC" name="htmlFileUpload" finished-at="2026-04-02T12:27:14 UTC" duration-ms="5781" status="PASS">
+        <test-method signature="htmlFileUpload()[pri:49, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:58:19 UTC" name="htmlFileUpload" finished-at="2026-06-08T08:58:25 UTC" duration-ms="5582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- htmlFileUpload -->
-        <test-method signature="deleteRepo()[pri:50, instance:SynoptixAI.TestClasses.DataRepoTest@367ffa75]" started-at="2026-04-02T12:27:14 UTC" name="deleteRepo" finished-at="2026-04-02T12:27:22 UTC" duration-ms="8072" status="PASS">
+        <test-method signature="deleteAgent()[pri:60, instance:SynoptixAI.TestClasses.MyAgentsTest@b3ca52e]" started-at="2026-06-08T08:58:25 UTC" name="deleteAgent" finished-at="2026-06-08T08:58:32 UTC" duration-ms="6935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteAgent -->
+      </class> <!-- SynoptixAI.TestClasses.MyAgentsTest -->
+      <class name="SynoptixAI.TestClasses.SearchTest">
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:03 UTC" name="setUpObject" finished-at="2026-06-08T08:54:03 UTC" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpObject -->
+        <test-method signature="docsFileUpload()[pri:41, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:03 UTC" name="docsFileUpload" finished-at="2026-06-08T08:54:09 UTC" duration-ms="6194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- docsFileUpload -->
+        <test-method signature="pdfFileUpload()[pri:42, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:09 UTC" name="pdfFileUpload" finished-at="2026-06-08T08:54:18 UTC" duration-ms="9218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pdfFileUpload -->
+        <test-method signature="pngFileUpload()[pri:43, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:18 UTC" name="pngFileUpload" finished-at="2026-06-08T08:54:26 UTC" duration-ms="7640" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pngFileUpload -->
+        <test-method signature="jpgFileUpload()[pri:44, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:26 UTC" name="jpgFileUpload" finished-at="2026-06-08T08:54:34 UTC" duration-ms="8706" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jpgFileUpload -->
+        <test-method signature="xlsxFileUpload()[pri:45, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:34 UTC" name="xlsxFileUpload" finished-at="2026-06-08T08:54:40 UTC" duration-ms="5580" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- xlsxFileUpload -->
+        <test-method signature="csvFileUpload()[pri:46, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:40 UTC" name="csvFileUpload" finished-at="2026-06-08T08:54:46 UTC" duration-ms="5587" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- csvFileUpload -->
+        <test-method signature="pptFileUpload()[pri:47, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:46 UTC" name="pptFileUpload" finished-at="2026-06-08T08:54:51 UTC" duration-ms="5606" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pptFileUpload -->
+        <test-method signature="txtFileUpload()[pri:48, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:51 UTC" name="txtFileUpload" finished-at="2026-06-08T08:54:57 UTC" duration-ms="5581" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- txtFileUpload -->
+        <test-method signature="htmlFileUpload()[pri:49, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:54:57 UTC" name="htmlFileUpload" finished-at="2026-06-08T08:55:02 UTC" duration-ms="5699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlFileUpload -->
+        <test-method signature="editHistory()[pri:52, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:55:02 UTC" name="editHistory" finished-at="2026-06-08T08:55:09 UTC" duration-ms="6174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- editHistory -->
+        <test-method signature="deleteHistory()[pri:53, instance:SynoptixAI.TestClasses.SearchTest@2a5c8d3f]" started-at="2026-06-08T08:55:09 UTC" name="deleteHistory" finished-at="2026-06-08T08:55:15 UTC" duration-ms="5975" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteHistory -->
+      </class> <!-- SynoptixAI.TestClasses.SearchTest -->
+      <class name="SynoptixAI.TestClasses.DataRepoTest">
+        <test-method is-config="true" signature="setUpObject()[pri:0, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:58:32 UTC" name="setUpObject" finished-at="2026-06-08T08:58:32 UTC" duration-ms="20" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpObject -->
+        <test-method signature="createNewRepo()[pri:40, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:58:32 UTC" name="createNewRepo" finished-at="2026-06-08T08:58:39 UTC" duration-ms="7005" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createNewRepo -->
+        <test-method signature="docsFileUpload()[pri:41, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:58:39 UTC" name="docsFileUpload" finished-at="2026-06-08T08:58:46 UTC" duration-ms="6839" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- docsFileUpload -->
+        <test-method signature="pdfFileUpload()[pri:42, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:58:46 UTC" name="pdfFileUpload" finished-at="2026-06-08T08:58:55 UTC" duration-ms="8848" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pdfFileUpload -->
+        <test-method signature="pngFileUpload()[pri:43, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:58:55 UTC" name="pngFileUpload" finished-at="2026-06-08T08:59:02 UTC" duration-ms="7810" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pngFileUpload -->
+        <test-method signature="jpgFileUpload()[pri:44, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:59:02 UTC" name="jpgFileUpload" finished-at="2026-06-08T08:59:11 UTC" duration-ms="8337" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- jpgFileUpload -->
+        <test-method signature="xlsxFileUpload()[pri:45, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:59:11 UTC" name="xlsxFileUpload" finished-at="2026-06-08T08:59:16 UTC" duration-ms="5763" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- xlsxFileUpload -->
+        <test-method signature="csvFileUpload()[pri:46, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:59:16 UTC" name="csvFileUpload" finished-at="2026-06-08T08:59:23 UTC" duration-ms="6296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- csvFileUpload -->
+        <test-method signature="pptFileUpload()[pri:47, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:59:23 UTC" name="pptFileUpload" finished-at="2026-06-08T08:59:29 UTC" duration-ms="5813" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- pptFileUpload -->
+        <test-method signature="txtFileUpload()[pri:48, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:59:29 UTC" name="txtFileUpload" finished-at="2026-06-08T08:59:34 UTC" duration-ms="5785" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- txtFileUpload -->
+        <test-method signature="htmlFileUpload()[pri:49, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:59:34 UTC" name="htmlFileUpload" finished-at="2026-06-08T08:59:40 UTC" duration-ms="5939" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- htmlFileUpload -->
+        <test-method signature="deleteRepo()[pri:50, instance:SynoptixAI.TestClasses.DataRepoTest@45c7e403]" started-at="2026-06-08T08:59:40 UTC" name="deleteRepo" finished-at="2026-06-08T09:00:10 UTC" duration-ms="30027" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='flex items-center gap-3']//*[name()='svg'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //div[@class='flex items-center gap-3']//*[name()='svg'] (tried for 30 second(s) with 500 milliseconds interval)
+Build info: version: '4.25.0', revision: '8a8aea2337'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.218, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: C:\Users\ISHAAK~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64199}, goog:processID: 11004, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:64199/devtoo..., se:cdpVersion: 148.0.7778.218, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 74e528a137fd9b099c04ff646284cd15
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+at SynoptixAI.Pages.DataRepo.deleteRepository(DataRepo.java:71)
+at SynoptixAI.TestClasses.DataRepoTest.deleteRepo(DataRepoTest.java:95)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- deleteRepo -->

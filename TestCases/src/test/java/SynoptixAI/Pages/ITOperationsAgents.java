@@ -15,8 +15,7 @@ import org.testng.Assert;
 import SynoptixAI.Setup.AgentsBaseSetup;
 
 public class ITOperationsAgents extends AgentsBaseSetup{
-	WebDriver driver;
-	WebDriverWait wait;
+
 	
 	private By agentDropDown=By.xpath("//span[normalize-space()='HR and Recruitment' or normalize-space()='All Teams']");
 	private By agentCategory=By.xpath("//button[contains(text(),'IT Operations')]");

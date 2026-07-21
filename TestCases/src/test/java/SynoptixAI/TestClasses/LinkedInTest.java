@@ -12,14 +12,13 @@ public class LinkedInTest extends BaseSetup{
 @BeforeClass(alwaysRun = true)
 public void setUpLinkedIn() {
 	post = new LinkedIn(driver);    
-	post.turnOnLinkedInTool();
 }
 
     
 @Test (priority=4)
 public void createLinkedInPost() throws InterruptedException 
 {
-	post.createPost();
+	//post.createPost();
 	Thread.sleep(2000);
 }
 

@@ -3,25 +3,26 @@ package SynoptixAI.TestClasses;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-
 import SynoptixAI.Pages.PresentationBuilder;
+import SynoptixAI.Pages.WebSearchTool;
 import SynoptixAI.Setup.BaseSetup;
 
-public class PresentationBuilderTest  extends BaseSetup{
-	PresentationBuilder ppt;
+public class WebSearchTest extends BaseSetup{
+	WebSearchTool webSearch;
 
 	// 🔹 Initialize once before any test runs
 	@BeforeClass(alwaysRun = true)
 	public void setUpGraph() {
-		ppt = new PresentationBuilder(driver);    
+		webSearch = new WebSearchTool(driver);    
 		
 	}
 
 
 	@Test (priority=6)
-	public void generatePresentation() throws InterruptedException 
+	public void searchOnWeb() throws InterruptedException 
 	{
-		ppt.checkPresentationTool();
+		webSearch.checkWebSearchTool();
 		Thread.sleep(2000);
 	}
+
 }
